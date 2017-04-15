@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <title>Code coverage report for node-npmtest-underscore/underscore/underscore.js</title>
     <meta charset="utf-8">
     <style>
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-underscore/underscore/</a> &#187; underscore.js</div>
+    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-underscore/underscore/</a> » underscore.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -3347,25 +3345,25 @@
     nativeCreate       = Object.create;
 &nbsp;
   // Naked function reference for surrogate-prototype-swapping.
-  var Ctor = <span class="fstat-no" title="function not covered" >function(){</span>};
+  var Ctor = <span class="fstat-no" title="function not covered">function(){</span>};
 &nbsp;
   // Create a safe reference to the Underscore object for use below.
-  var _ = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (obj instanceof _) <span class="cstat-no" title="statement not covered" >return obj;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (!(this instanceof _)) <span class="cstat-no" title="statement not covered" >return new _(obj);</span></span>
-<span class="cstat-no" title="statement not covered" >    this._wrapped = obj;</span>
+  var _ = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (obj instanceof _) <span class="cstat-no" title="statement not covered">return obj;</span></span>
+<span class="cstat-no" title="statement not covered">    if (!(this instanceof _)) <span class="cstat-no" title="statement not covered">return new _(obj);</span></span>
+<span class="cstat-no" title="statement not covered">    this._wrapped = obj;</span>
   };
 &nbsp;
   // Export the Underscore object for **Node.js**, with
   // backwards-compatibility for the old `require()` API. If we're in
   // the browser, add `_` as a global object.
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof exports !== 'undefined') {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
+  <span class="missing-if-branch" title="else path not taken">E</span>if (typeof exports !== 'undefined') {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
       exports = module.exports = _;
     }
     exports._ = _;
   } else {
-<span class="cstat-no" title="statement not covered" >    root._ = _;</span>
+<span class="cstat-no" title="statement not covered">    root._ = _;</span>
   }
 &nbsp;
   // Current version.
@@ -3375,70 +3373,70 @@
   // of the passed-in callback, to be repeatedly applied in other Underscore
   // functions.
   var optimizeCb = function(func, context, argCount) {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (context === void 0) return func;
-<span class="cstat-no" title="statement not covered" >    switch (argCount == null ? 3 : argCount) {</span>
-      case 1: <span class="cstat-no" title="statement not covered" >return <span class="fstat-no" title="function not covered" >function(value) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return func.call(context, value);</span>
+    <span class="missing-if-branch" title="else path not taken">E</span>if (context === void 0) return func;
+<span class="cstat-no" title="statement not covered">    switch (argCount == null ? 3 : argCount) {</span>
+      case 1: <span class="cstat-no" title="statement not covered">return <span class="fstat-no" title="function not covered">function(value) {</span></span>
+<span class="cstat-no" title="statement not covered">        return func.call(context, value);</span>
       };
-      case 2: <span class="cstat-no" title="statement not covered" >return <span class="fstat-no" title="function not covered" >function(value, other) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return func.call(context, value, other);</span>
+      case 2: <span class="cstat-no" title="statement not covered">return <span class="fstat-no" title="function not covered">function(value, other) {</span></span>
+<span class="cstat-no" title="statement not covered">        return func.call(context, value, other);</span>
       };
-      case 3: <span class="cstat-no" title="statement not covered" >return <span class="fstat-no" title="function not covered" >function(value, index, collection) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return func.call(context, value, index, collection);</span>
+      case 3: <span class="cstat-no" title="statement not covered">return <span class="fstat-no" title="function not covered">function(value, index, collection) {</span></span>
+<span class="cstat-no" title="statement not covered">        return func.call(context, value, index, collection);</span>
       };
-      case 4: <span class="cstat-no" title="statement not covered" >return <span class="fstat-no" title="function not covered" >function(accumulator, value, index, collection) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return func.call(context, accumulator, value, index, collection);</span>
+      case 4: <span class="cstat-no" title="statement not covered">return <span class="fstat-no" title="function not covered">function(accumulator, value, index, collection) {</span></span>
+<span class="cstat-no" title="statement not covered">        return func.call(context, accumulator, value, index, collection);</span>
       };
     }
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      return func.apply(context, arguments);</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      return func.apply(context, arguments);</span>
     };
   };
 &nbsp;
   // A mostly-internal function to generate callbacks that can be applied
   // to each element in a collection, returning the desired result — either
   // identity, an arbitrary callback, a property matcher, or a property accessor.
-  var cb = <span class="fstat-no" title="function not covered" >function(value, context, argCount) {</span>
-<span class="cstat-no" title="statement not covered" >    if (value == null) <span class="cstat-no" title="statement not covered" >return _.identity;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (_.isFunction(value)) <span class="cstat-no" title="statement not covered" >return optimizeCb(value, context, argCount);</span></span>
-<span class="cstat-no" title="statement not covered" >    if (_.isObject(value)) <span class="cstat-no" title="statement not covered" >return _.matcher(value);</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.property(value);</span>
+  var cb = <span class="fstat-no" title="function not covered">function(value, context, argCount) {</span>
+<span class="cstat-no" title="statement not covered">    if (value == null) <span class="cstat-no" title="statement not covered">return _.identity;</span></span>
+<span class="cstat-no" title="statement not covered">    if (_.isFunction(value)) <span class="cstat-no" title="statement not covered">return optimizeCb(value, context, argCount);</span></span>
+<span class="cstat-no" title="statement not covered">    if (_.isObject(value)) <span class="cstat-no" title="statement not covered">return _.matcher(value);</span></span>
+<span class="cstat-no" title="statement not covered">    return _.property(value);</span>
   };
-  _.iteratee = <span class="fstat-no" title="function not covered" >function(value, context) {</span>
-<span class="cstat-no" title="statement not covered" >    return cb(value, context, Infinity);</span>
+  _.iteratee = <span class="fstat-no" title="function not covered">function(value, context) {</span>
+<span class="cstat-no" title="statement not covered">    return cb(value, context, Infinity);</span>
   };
 &nbsp;
   // An internal function for creating assigner functions.
   var createAssigner = function(keysFunc, undefinedOnly) {
-    return <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >      var length = arguments.length;</span>
-<span class="cstat-no" title="statement not covered" >      if (length &lt; 2 || obj == null) <span class="cstat-no" title="statement not covered" >return obj;</span></span>
-<span class="cstat-no" title="statement not covered" >      for (var index = 1; index &lt; length; index++) {</span>
-<span class="cstat-no" title="statement not covered" >        var source = arguments[index],</span>
+    return <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">      var length = arguments.length;</span>
+<span class="cstat-no" title="statement not covered">      if (length &lt; 2 || obj == null) <span class="cstat-no" title="statement not covered">return obj;</span></span>
+<span class="cstat-no" title="statement not covered">      for (var index = 1; index &lt; length; index++) {</span>
+<span class="cstat-no" title="statement not covered">        var source = arguments[index],</span>
             keys = keysFunc(source),
             l = keys.length;
-<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; l; i++) {</span>
-<span class="cstat-no" title="statement not covered" >          var key = keys[i];</span>
-<span class="cstat-no" title="statement not covered" >          if (!undefinedOnly || obj[key] === void 0) <span class="cstat-no" title="statement not covered" >obj[key] = source[key];</span></span>
+<span class="cstat-no" title="statement not covered">        for (var i = 0; i &lt; l; i++) {</span>
+<span class="cstat-no" title="statement not covered">          var key = keys[i];</span>
+<span class="cstat-no" title="statement not covered">          if (!undefinedOnly || obj[key] === void 0) <span class="cstat-no" title="statement not covered">obj[key] = source[key];</span></span>
         }
       }
-<span class="cstat-no" title="statement not covered" >      return obj;</span>
+<span class="cstat-no" title="statement not covered">      return obj;</span>
     };
   };
 &nbsp;
   // An internal function for creating a new object that inherits from another.
-  var baseCreate = <span class="fstat-no" title="function not covered" >function(prototype) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!_.isObject(prototype)) <span class="cstat-no" title="statement not covered" >return {};</span></span>
-<span class="cstat-no" title="statement not covered" >    if (nativeCreate) <span class="cstat-no" title="statement not covered" >return nativeCreate(prototype);</span></span>
-<span class="cstat-no" title="statement not covered" >    Ctor.prototype = prototype;</span>
-<span class="cstat-no" title="statement not covered" >    var result = new Ctor;</span>
-<span class="cstat-no" title="statement not covered" >    Ctor.prototype = null;</span>
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+  var baseCreate = <span class="fstat-no" title="function not covered">function(prototype) {</span>
+<span class="cstat-no" title="statement not covered">    if (!_.isObject(prototype)) <span class="cstat-no" title="statement not covered">return {};</span></span>
+<span class="cstat-no" title="statement not covered">    if (nativeCreate) <span class="cstat-no" title="statement not covered">return nativeCreate(prototype);</span></span>
+<span class="cstat-no" title="statement not covered">    Ctor.prototype = prototype;</span>
+<span class="cstat-no" title="statement not covered">    var result = new Ctor;</span>
+<span class="cstat-no" title="statement not covered">    Ctor.prototype = null;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   var property = function(key) {
     return function(obj) {
-      return obj == null ? <span class="branch-0 cbranch-no" title="branch not covered" >void 0 </span>: obj[key];
+      return obj == null ? <span class="branch-0 cbranch-no" title="branch not covered">void 0 </span>: obj[key];
     };
   };
 &nbsp;
@@ -3462,55 +3460,55 @@
   _.each = _.forEach = function(obj, iteratee, context) {
     iteratee = optimizeCb(iteratee, context);
     var i, length;
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (isArrayLike(obj)) {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (isArrayLike(obj)) {
       for (i = 0, length = obj.length; i &lt; length; i++) {
         iteratee(obj[i], i, obj);
       }
     } else {
-<span class="cstat-no" title="statement not covered" >      var keys = _.keys(obj);</span>
-<span class="cstat-no" title="statement not covered" >      for (i = 0, length = keys.length; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        iteratee(obj[keys[i]], keys[i], obj);</span>
+<span class="cstat-no" title="statement not covered">      var keys = _.keys(obj);</span>
+<span class="cstat-no" title="statement not covered">      for (i = 0, length = keys.length; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        iteratee(obj[keys[i]], keys[i], obj);</span>
       }
     }
     return obj;
   };
 &nbsp;
   // Return the results of applying the iteratee to each element.
-  _.map = _.collect = <span class="fstat-no" title="function not covered" >function(obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    iteratee = cb(iteratee, context);</span>
-<span class="cstat-no" title="statement not covered" >    var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
+  _.map = _.collect = <span class="fstat-no" title="function not covered">function(obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    iteratee = cb(iteratee, context);</span>
+<span class="cstat-no" title="statement not covered">    var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
         length = (keys || obj).length,
         results = Array(length);
-<span class="cstat-no" title="statement not covered" >    for (var index = 0; index &lt; length; index++) {</span>
-<span class="cstat-no" title="statement not covered" >      var currentKey = keys ? keys[index] : index;</span>
-<span class="cstat-no" title="statement not covered" >      results[index] = iteratee(obj[currentKey], currentKey, obj);</span>
+<span class="cstat-no" title="statement not covered">    for (var index = 0; index &lt; length; index++) {</span>
+<span class="cstat-no" title="statement not covered">      var currentKey = keys ? keys[index] : index;</span>
+<span class="cstat-no" title="statement not covered">      results[index] = iteratee(obj[currentKey], currentKey, obj);</span>
     }
-<span class="cstat-no" title="statement not covered" >    return results;</span>
+<span class="cstat-no" title="statement not covered">    return results;</span>
   };
 &nbsp;
   // Create a reducing function iterating left or right.
   function createReduce(dir) {
     // Optimized iterator function as using arguments.length
     // in the main function will deoptimize the, see #1991.
-<span class="fstat-no" title="function not covered" >    function iterator(obj, iteratee, memo, keys, index, length) {</span>
-<span class="cstat-no" title="statement not covered" >      for (; index &gt;= 0 &amp;&amp; index &lt; length; index += dir) {</span>
-<span class="cstat-no" title="statement not covered" >        var currentKey = keys ? keys[index] : index;</span>
-<span class="cstat-no" title="statement not covered" >        memo = iteratee(memo, obj[currentKey], currentKey, obj);</span>
+<span class="fstat-no" title="function not covered">    function iterator(obj, iteratee, memo, keys, index, length) {</span>
+<span class="cstat-no" title="statement not covered">      for (; index &gt;= 0 &amp;&amp; index &lt; length; index += dir) {</span>
+<span class="cstat-no" title="statement not covered">        var currentKey = keys ? keys[index] : index;</span>
+<span class="cstat-no" title="statement not covered">        memo = iteratee(memo, obj[currentKey], currentKey, obj);</span>
       }
-<span class="cstat-no" title="statement not covered" >      return memo;</span>
+<span class="cstat-no" title="statement not covered">      return memo;</span>
     }
 &nbsp;
-    return <span class="fstat-no" title="function not covered" >function(obj, iteratee, memo, context) {</span>
-<span class="cstat-no" title="statement not covered" >      iteratee = optimizeCb(iteratee, context, 4);</span>
-<span class="cstat-no" title="statement not covered" >      var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
+    return <span class="fstat-no" title="function not covered">function(obj, iteratee, memo, context) {</span>
+<span class="cstat-no" title="statement not covered">      iteratee = optimizeCb(iteratee, context, 4);</span>
+<span class="cstat-no" title="statement not covered">      var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
           length = (keys || obj).length,
           index = dir &gt; 0 ? 0 : length - 1;
       // Determine the initial value if none is provided.
-<span class="cstat-no" title="statement not covered" >      if (arguments.length &lt; 3) {</span>
-<span class="cstat-no" title="statement not covered" >        memo = obj[keys ? keys[index] : index];</span>
-<span class="cstat-no" title="statement not covered" >        index += dir;</span>
+<span class="cstat-no" title="statement not covered">      if (arguments.length &lt; 3) {</span>
+<span class="cstat-no" title="statement not covered">        memo = obj[keys ? keys[index] : index];</span>
+<span class="cstat-no" title="statement not covered">        index += dir;</span>
       }
-<span class="cstat-no" title="statement not covered" >      return iterator(obj, iteratee, memo, keys, index, length);</span>
+<span class="cstat-no" title="statement not covered">      return iterator(obj, iteratee, memo, keys, index, length);</span>
     };
   }
 &nbsp;
@@ -3522,243 +3520,243 @@
   _.reduceRight = _.foldr = createReduce(-1);
 &nbsp;
   // Return the first value which passes a truth test. Aliased as `detect`.
-  _.find = _.detect = <span class="fstat-no" title="function not covered" >function(obj, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >    var key;</span>
-<span class="cstat-no" title="statement not covered" >    if (isArrayLike(obj)) {</span>
-<span class="cstat-no" title="statement not covered" >      key = _.findIndex(obj, predicate, context);</span>
+  _.find = _.detect = <span class="fstat-no" title="function not covered">function(obj, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">    var key;</span>
+<span class="cstat-no" title="statement not covered">    if (isArrayLike(obj)) {</span>
+<span class="cstat-no" title="statement not covered">      key = _.findIndex(obj, predicate, context);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      key = _.findKey(obj, predicate, context);</span>
+<span class="cstat-no" title="statement not covered">      key = _.findKey(obj, predicate, context);</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (key !== void 0 &amp;&amp; key !== -1) <span class="cstat-no" title="statement not covered" >return obj[key];</span></span>
+<span class="cstat-no" title="statement not covered">    if (key !== void 0 &amp;&amp; key !== -1) <span class="cstat-no" title="statement not covered">return obj[key];</span></span>
   };
 &nbsp;
   // Return all the elements that pass a truth test.
   // Aliased as `select`.
-  _.filter = _.select = <span class="fstat-no" title="function not covered" >function(obj, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >    var results = [];</span>
-<span class="cstat-no" title="statement not covered" >    predicate = cb(predicate, context);</span>
-<span class="cstat-no" title="statement not covered" >    _.each(obj, <span class="fstat-no" title="function not covered" >function(value, index, list) {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (predicate(value, index, list)) <span class="cstat-no" title="statement not covered" >results.push(value);</span></span>
+  _.filter = _.select = <span class="fstat-no" title="function not covered">function(obj, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">    var results = [];</span>
+<span class="cstat-no" title="statement not covered">    predicate = cb(predicate, context);</span>
+<span class="cstat-no" title="statement not covered">    _.each(obj, <span class="fstat-no" title="function not covered">function(value, index, list) {</span></span>
+<span class="cstat-no" title="statement not covered">      if (predicate(value, index, list)) <span class="cstat-no" title="statement not covered">results.push(value);</span></span>
     });
-<span class="cstat-no" title="statement not covered" >    return results;</span>
+<span class="cstat-no" title="statement not covered">    return results;</span>
   };
 &nbsp;
   // Return all the elements for which a truth test fails.
-  _.reject = <span class="fstat-no" title="function not covered" >function(obj, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.filter(obj, _.negate(cb(predicate)), context);</span>
+  _.reject = <span class="fstat-no" title="function not covered">function(obj, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">    return _.filter(obj, _.negate(cb(predicate)), context);</span>
   };
 &nbsp;
   // Determine whether all of the elements match a truth test.
   // Aliased as `all`.
-  _.every = _.all = <span class="fstat-no" title="function not covered" >function(obj, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >    predicate = cb(predicate, context);</span>
-<span class="cstat-no" title="statement not covered" >    var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
+  _.every = _.all = <span class="fstat-no" title="function not covered">function(obj, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">    predicate = cb(predicate, context);</span>
+<span class="cstat-no" title="statement not covered">    var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
         length = (keys || obj).length;
-<span class="cstat-no" title="statement not covered" >    for (var index = 0; index &lt; length; index++) {</span>
-<span class="cstat-no" title="statement not covered" >      var currentKey = keys ? keys[index] : index;</span>
-<span class="cstat-no" title="statement not covered" >      if (!predicate(obj[currentKey], currentKey, obj)) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered">    for (var index = 0; index &lt; length; index++) {</span>
+<span class="cstat-no" title="statement not covered">      var currentKey = keys ? keys[index] : index;</span>
+<span class="cstat-no" title="statement not covered">      if (!predicate(obj[currentKey], currentKey, obj)) <span class="cstat-no" title="statement not covered">return false;</span></span>
     }
-<span class="cstat-no" title="statement not covered" >    return true;</span>
+<span class="cstat-no" title="statement not covered">    return true;</span>
   };
 &nbsp;
   // Determine if at least one element in the object matches a truth test.
   // Aliased as `any`.
-  _.some = _.any = <span class="fstat-no" title="function not covered" >function(obj, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >    predicate = cb(predicate, context);</span>
-<span class="cstat-no" title="statement not covered" >    var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
+  _.some = _.any = <span class="fstat-no" title="function not covered">function(obj, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">    predicate = cb(predicate, context);</span>
+<span class="cstat-no" title="statement not covered">    var keys = !isArrayLike(obj) &amp;&amp; _.keys(obj),</span>
         length = (keys || obj).length;
-<span class="cstat-no" title="statement not covered" >    for (var index = 0; index &lt; length; index++) {</span>
-<span class="cstat-no" title="statement not covered" >      var currentKey = keys ? keys[index] : index;</span>
-<span class="cstat-no" title="statement not covered" >      if (predicate(obj[currentKey], currentKey, obj)) <span class="cstat-no" title="statement not covered" >return true;</span></span>
+<span class="cstat-no" title="statement not covered">    for (var index = 0; index &lt; length; index++) {</span>
+<span class="cstat-no" title="statement not covered">      var currentKey = keys ? keys[index] : index;</span>
+<span class="cstat-no" title="statement not covered">      if (predicate(obj[currentKey], currentKey, obj)) <span class="cstat-no" title="statement not covered">return true;</span></span>
     }
-<span class="cstat-no" title="statement not covered" >    return false;</span>
+<span class="cstat-no" title="statement not covered">    return false;</span>
   };
 &nbsp;
   // Determine if the array or object contains a given item (using `===`).
   // Aliased as `includes` and `include`.
-  _.contains = _.includes = _.include = <span class="fstat-no" title="function not covered" >function(obj, item, fromIndex, guard) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!isArrayLike(obj)) <span class="cstat-no" title="statement not covered" >obj = _.values(obj);</span></span>
-<span class="cstat-no" title="statement not covered" >    if (typeof fromIndex != 'number' || guard) <span class="cstat-no" title="statement not covered" >fromIndex = 0;</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.indexOf(obj, item, fromIndex) &gt;= 0;</span>
+  _.contains = _.includes = _.include = <span class="fstat-no" title="function not covered">function(obj, item, fromIndex, guard) {</span>
+<span class="cstat-no" title="statement not covered">    if (!isArrayLike(obj)) <span class="cstat-no" title="statement not covered">obj = _.values(obj);</span></span>
+<span class="cstat-no" title="statement not covered">    if (typeof fromIndex != 'number' || guard) <span class="cstat-no" title="statement not covered">fromIndex = 0;</span></span>
+<span class="cstat-no" title="statement not covered">    return _.indexOf(obj, item, fromIndex) &gt;= 0;</span>
   };
 &nbsp;
   // Invoke a method (with arguments) on every item in a collection.
-  _.invoke = <span class="fstat-no" title="function not covered" >function(obj, method) {</span>
-<span class="cstat-no" title="statement not covered" >    var args = slice.call(arguments, 2);</span>
-<span class="cstat-no" title="statement not covered" >    var isFunc = _.isFunction(method);</span>
-<span class="cstat-no" title="statement not covered" >    return _.map(obj, <span class="fstat-no" title="function not covered" >function(value) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var func = isFunc ? method : value[method];</span>
-<span class="cstat-no" title="statement not covered" >      return func == null ? func : func.apply(value, args);</span>
+  _.invoke = <span class="fstat-no" title="function not covered">function(obj, method) {</span>
+<span class="cstat-no" title="statement not covered">    var args = slice.call(arguments, 2);</span>
+<span class="cstat-no" title="statement not covered">    var isFunc = _.isFunction(method);</span>
+<span class="cstat-no" title="statement not covered">    return _.map(obj, <span class="fstat-no" title="function not covered">function(value) {</span></span>
+<span class="cstat-no" title="statement not covered">      var func = isFunc ? method : value[method];</span>
+<span class="cstat-no" title="statement not covered">      return func == null ? func : func.apply(value, args);</span>
     });
   };
 &nbsp;
   // Convenience version of a common use case of `map`: fetching a property.
-  _.pluck = <span class="fstat-no" title="function not covered" >function(obj, key) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.map(obj, _.property(key));</span>
+  _.pluck = <span class="fstat-no" title="function not covered">function(obj, key) {</span>
+<span class="cstat-no" title="statement not covered">    return _.map(obj, _.property(key));</span>
   };
 &nbsp;
   // Convenience version of a common use case of `filter`: selecting only objects
   // containing specific `key:value` pairs.
-  _.where = <span class="fstat-no" title="function not covered" >function(obj, attrs) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.filter(obj, _.matcher(attrs));</span>
+  _.where = <span class="fstat-no" title="function not covered">function(obj, attrs) {</span>
+<span class="cstat-no" title="statement not covered">    return _.filter(obj, _.matcher(attrs));</span>
   };
 &nbsp;
   // Convenience version of a common use case of `find`: getting the first object
   // containing specific `key:value` pairs.
-  _.findWhere = <span class="fstat-no" title="function not covered" >function(obj, attrs) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.find(obj, _.matcher(attrs));</span>
+  _.findWhere = <span class="fstat-no" title="function not covered">function(obj, attrs) {</span>
+<span class="cstat-no" title="statement not covered">    return _.find(obj, _.matcher(attrs));</span>
   };
 &nbsp;
   // Return the maximum element (or element-based computation).
-  _.max = <span class="fstat-no" title="function not covered" >function(obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    var result = -Infinity, lastComputed = -Infinity,</span>
+  _.max = <span class="fstat-no" title="function not covered">function(obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    var result = -Infinity, lastComputed = -Infinity,</span>
         value, computed;
-<span class="cstat-no" title="statement not covered" >    if (iteratee == null &amp;&amp; obj != null) {</span>
-<span class="cstat-no" title="statement not covered" >      obj = isArrayLike(obj) ? obj : _.values(obj);</span>
-<span class="cstat-no" title="statement not covered" >      for (var i = 0, length = obj.length; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        value = obj[i];</span>
-<span class="cstat-no" title="statement not covered" >        if (value &gt; result) {</span>
-<span class="cstat-no" title="statement not covered" >          result = value;</span>
+<span class="cstat-no" title="statement not covered">    if (iteratee == null &amp;&amp; obj != null) {</span>
+<span class="cstat-no" title="statement not covered">      obj = isArrayLike(obj) ? obj : _.values(obj);</span>
+<span class="cstat-no" title="statement not covered">      for (var i = 0, length = obj.length; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        value = obj[i];</span>
+<span class="cstat-no" title="statement not covered">        if (value &gt; result) {</span>
+<span class="cstat-no" title="statement not covered">          result = value;</span>
         }
       }
     } else {
-<span class="cstat-no" title="statement not covered" >      iteratee = cb(iteratee, context);</span>
-<span class="cstat-no" title="statement not covered" >      _.each(obj, <span class="fstat-no" title="function not covered" >function(value, index, list) {</span></span>
-<span class="cstat-no" title="statement not covered" >        computed = iteratee(value, index, list);</span>
-<span class="cstat-no" title="statement not covered" >        if (computed &gt; lastComputed || computed === -Infinity &amp;&amp; result === -Infinity) {</span>
-<span class="cstat-no" title="statement not covered" >          result = value;</span>
-<span class="cstat-no" title="statement not covered" >          lastComputed = computed;</span>
+<span class="cstat-no" title="statement not covered">      iteratee = cb(iteratee, context);</span>
+<span class="cstat-no" title="statement not covered">      _.each(obj, <span class="fstat-no" title="function not covered">function(value, index, list) {</span></span>
+<span class="cstat-no" title="statement not covered">        computed = iteratee(value, index, list);</span>
+<span class="cstat-no" title="statement not covered">        if (computed &gt; lastComputed || computed === -Infinity &amp;&amp; result === -Infinity) {</span>
+<span class="cstat-no" title="statement not covered">          result = value;</span>
+<span class="cstat-no" title="statement not covered">          lastComputed = computed;</span>
         }
       });
     }
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   // Return the minimum element (or element-based computation).
-  _.min = <span class="fstat-no" title="function not covered" >function(obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    var result = Infinity, lastComputed = Infinity,</span>
+  _.min = <span class="fstat-no" title="function not covered">function(obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    var result = Infinity, lastComputed = Infinity,</span>
         value, computed;
-<span class="cstat-no" title="statement not covered" >    if (iteratee == null &amp;&amp; obj != null) {</span>
-<span class="cstat-no" title="statement not covered" >      obj = isArrayLike(obj) ? obj : _.values(obj);</span>
-<span class="cstat-no" title="statement not covered" >      for (var i = 0, length = obj.length; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        value = obj[i];</span>
-<span class="cstat-no" title="statement not covered" >        if (value &lt; result) {</span>
-<span class="cstat-no" title="statement not covered" >          result = value;</span>
+<span class="cstat-no" title="statement not covered">    if (iteratee == null &amp;&amp; obj != null) {</span>
+<span class="cstat-no" title="statement not covered">      obj = isArrayLike(obj) ? obj : _.values(obj);</span>
+<span class="cstat-no" title="statement not covered">      for (var i = 0, length = obj.length; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        value = obj[i];</span>
+<span class="cstat-no" title="statement not covered">        if (value &lt; result) {</span>
+<span class="cstat-no" title="statement not covered">          result = value;</span>
         }
       }
     } else {
-<span class="cstat-no" title="statement not covered" >      iteratee = cb(iteratee, context);</span>
-<span class="cstat-no" title="statement not covered" >      _.each(obj, <span class="fstat-no" title="function not covered" >function(value, index, list) {</span></span>
-<span class="cstat-no" title="statement not covered" >        computed = iteratee(value, index, list);</span>
-<span class="cstat-no" title="statement not covered" >        if (computed &lt; lastComputed || computed === Infinity &amp;&amp; result === Infinity) {</span>
-<span class="cstat-no" title="statement not covered" >          result = value;</span>
-<span class="cstat-no" title="statement not covered" >          lastComputed = computed;</span>
+<span class="cstat-no" title="statement not covered">      iteratee = cb(iteratee, context);</span>
+<span class="cstat-no" title="statement not covered">      _.each(obj, <span class="fstat-no" title="function not covered">function(value, index, list) {</span></span>
+<span class="cstat-no" title="statement not covered">        computed = iteratee(value, index, list);</span>
+<span class="cstat-no" title="statement not covered">        if (computed &lt; lastComputed || computed === Infinity &amp;&amp; result === Infinity) {</span>
+<span class="cstat-no" title="statement not covered">          result = value;</span>
+<span class="cstat-no" title="statement not covered">          lastComputed = computed;</span>
         }
       });
     }
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   // Shuffle a collection, using the modern version of the
   // [Fisher-Yates shuffle](http://en.wikipedia.org/wiki/Fisher–Yates_shuffle).
-  _.shuffle = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    var set = isArrayLike(obj) ? obj : _.values(obj);</span>
-<span class="cstat-no" title="statement not covered" >    var length = set.length;</span>
-<span class="cstat-no" title="statement not covered" >    var shuffled = Array(length);</span>
-<span class="cstat-no" title="statement not covered" >    for (var index = 0, rand; index &lt; length; index++) {</span>
-<span class="cstat-no" title="statement not covered" >      rand = _.random(0, index);</span>
-<span class="cstat-no" title="statement not covered" >      if (rand !== index) <span class="cstat-no" title="statement not covered" >shuffled[index] = shuffled[rand];</span></span>
-<span class="cstat-no" title="statement not covered" >      shuffled[rand] = set[index];</span>
+  _.shuffle = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    var set = isArrayLike(obj) ? obj : _.values(obj);</span>
+<span class="cstat-no" title="statement not covered">    var length = set.length;</span>
+<span class="cstat-no" title="statement not covered">    var shuffled = Array(length);</span>
+<span class="cstat-no" title="statement not covered">    for (var index = 0, rand; index &lt; length; index++) {</span>
+<span class="cstat-no" title="statement not covered">      rand = _.random(0, index);</span>
+<span class="cstat-no" title="statement not covered">      if (rand !== index) <span class="cstat-no" title="statement not covered">shuffled[index] = shuffled[rand];</span></span>
+<span class="cstat-no" title="statement not covered">      shuffled[rand] = set[index];</span>
     }
-<span class="cstat-no" title="statement not covered" >    return shuffled;</span>
+<span class="cstat-no" title="statement not covered">    return shuffled;</span>
   };
 &nbsp;
   // Sample **n** random values from a collection.
   // If **n** is not specified, returns a single random element.
   // The internal `guard` argument allows it to work with `map`.
-  _.sample = <span class="fstat-no" title="function not covered" >function(obj, n, guard) {</span>
-<span class="cstat-no" title="statement not covered" >    if (n == null || guard) {</span>
-<span class="cstat-no" title="statement not covered" >      if (!isArrayLike(obj)) <span class="cstat-no" title="statement not covered" >obj = _.values(obj);</span></span>
-<span class="cstat-no" title="statement not covered" >      return obj[_.random(obj.length - 1)];</span>
+  _.sample = <span class="fstat-no" title="function not covered">function(obj, n, guard) {</span>
+<span class="cstat-no" title="statement not covered">    if (n == null || guard) {</span>
+<span class="cstat-no" title="statement not covered">      if (!isArrayLike(obj)) <span class="cstat-no" title="statement not covered">obj = _.values(obj);</span></span>
+<span class="cstat-no" title="statement not covered">      return obj[_.random(obj.length - 1)];</span>
     }
-<span class="cstat-no" title="statement not covered" >    return _.shuffle(obj).slice(0, Math.max(0, n));</span>
+<span class="cstat-no" title="statement not covered">    return _.shuffle(obj).slice(0, Math.max(0, n));</span>
   };
 &nbsp;
   // Sort the object's values by a criterion produced by an iteratee.
-  _.sortBy = <span class="fstat-no" title="function not covered" >function(obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    iteratee = cb(iteratee, context);</span>
-<span class="cstat-no" title="statement not covered" >    return _.pluck(_.map(obj, <span class="fstat-no" title="function not covered" >function(value, index, list) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return {</span>
+  _.sortBy = <span class="fstat-no" title="function not covered">function(obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    iteratee = cb(iteratee, context);</span>
+<span class="cstat-no" title="statement not covered">    return _.pluck(_.map(obj, <span class="fstat-no" title="function not covered">function(value, index, list) {</span></span>
+<span class="cstat-no" title="statement not covered">      return {</span>
         value: value,
         index: index,
         criteria: iteratee(value, index, list)
       };
-    }).sort(<span class="fstat-no" title="function not covered" >function(left, right) {</span>
-<span class="cstat-no" title="statement not covered" >      var a = left.criteria;</span>
-<span class="cstat-no" title="statement not covered" >      var b = right.criteria;</span>
-<span class="cstat-no" title="statement not covered" >      if (a !== b) {</span>
-<span class="cstat-no" title="statement not covered" >        if (a &gt; b || a === void 0) <span class="cstat-no" title="statement not covered" >return 1;</span></span>
-<span class="cstat-no" title="statement not covered" >        if (a &lt; b || b === void 0) <span class="cstat-no" title="statement not covered" >return -1;</span></span>
+    }).sort(<span class="fstat-no" title="function not covered">function(left, right) {</span>
+<span class="cstat-no" title="statement not covered">      var a = left.criteria;</span>
+<span class="cstat-no" title="statement not covered">      var b = right.criteria;</span>
+<span class="cstat-no" title="statement not covered">      if (a !== b) {</span>
+<span class="cstat-no" title="statement not covered">        if (a &gt; b || a === void 0) <span class="cstat-no" title="statement not covered">return 1;</span></span>
+<span class="cstat-no" title="statement not covered">        if (a &lt; b || b === void 0) <span class="cstat-no" title="statement not covered">return -1;</span></span>
       }
-<span class="cstat-no" title="statement not covered" >      return left.index - right.index;</span>
+<span class="cstat-no" title="statement not covered">      return left.index - right.index;</span>
     }), 'value');
   };
 &nbsp;
   // An internal function used for aggregate "group by" operations.
   var group = function(behavior) {
-    return <span class="fstat-no" title="function not covered" >function(obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >      var result = {};</span>
-<span class="cstat-no" title="statement not covered" >      iteratee = cb(iteratee, context);</span>
-<span class="cstat-no" title="statement not covered" >      _.each(obj, <span class="fstat-no" title="function not covered" >function(value, index) {</span></span>
-<span class="cstat-no" title="statement not covered" >        var key = iteratee(value, index, obj);</span>
-<span class="cstat-no" title="statement not covered" >        behavior(result, value, key);</span>
+    return <span class="fstat-no" title="function not covered">function(obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">      var result = {};</span>
+<span class="cstat-no" title="statement not covered">      iteratee = cb(iteratee, context);</span>
+<span class="cstat-no" title="statement not covered">      _.each(obj, <span class="fstat-no" title="function not covered">function(value, index) {</span></span>
+<span class="cstat-no" title="statement not covered">        var key = iteratee(value, index, obj);</span>
+<span class="cstat-no" title="statement not covered">        behavior(result, value, key);</span>
       });
-<span class="cstat-no" title="statement not covered" >      return result;</span>
+<span class="cstat-no" title="statement not covered">      return result;</span>
     };
   };
 &nbsp;
   // Groups the object's values by a criterion. Pass either a string attribute
   // to group by, or a function that returns the criterion.
-  _.groupBy = group(<span class="fstat-no" title="function not covered" >function(result, value, key) {</span>
-<span class="cstat-no" title="statement not covered" >    if (_.has(result, key)) <span class="cstat-no" title="statement not covered" >result[key].push(value); </span>else <span class="cstat-no" title="statement not covered" >result[key] = [value];</span></span>
+  _.groupBy = group(<span class="fstat-no" title="function not covered">function(result, value, key) {</span>
+<span class="cstat-no" title="statement not covered">    if (_.has(result, key)) <span class="cstat-no" title="statement not covered">result[key].push(value); </span>else <span class="cstat-no" title="statement not covered">result[key] = [value];</span></span>
   });
 &nbsp;
   // Indexes the object's values by a criterion, similar to `groupBy`, but for
   // when you know that your index values will be unique.
-  _.indexBy = group(<span class="fstat-no" title="function not covered" >function(result, value, key) {</span>
-<span class="cstat-no" title="statement not covered" >    result[key] = value;</span>
+  _.indexBy = group(<span class="fstat-no" title="function not covered">function(result, value, key) {</span>
+<span class="cstat-no" title="statement not covered">    result[key] = value;</span>
   });
 &nbsp;
   // Counts instances of an object that group by a certain criterion. Pass
   // either a string attribute to count by, or a function that returns the
   // criterion.
-  _.countBy = group(<span class="fstat-no" title="function not covered" >function(result, value, key) {</span>
-<span class="cstat-no" title="statement not covered" >    if (_.has(result, key)) <span class="cstat-no" title="statement not covered" >result[key]++; </span>else <span class="cstat-no" title="statement not covered" >result[key] = 1;</span></span>
+  _.countBy = group(<span class="fstat-no" title="function not covered">function(result, value, key) {</span>
+<span class="cstat-no" title="statement not covered">    if (_.has(result, key)) <span class="cstat-no" title="statement not covered">result[key]++; </span>else <span class="cstat-no" title="statement not covered">result[key] = 1;</span></span>
   });
 &nbsp;
   // Safely create a real, live array from anything iterable.
-  _.toArray = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!obj) <span class="cstat-no" title="statement not covered" >return [];</span></span>
-<span class="cstat-no" title="statement not covered" >    if (_.isArray(obj)) <span class="cstat-no" title="statement not covered" >return slice.call(obj);</span></span>
-<span class="cstat-no" title="statement not covered" >    if (isArrayLike(obj)) <span class="cstat-no" title="statement not covered" >return _.map(obj, _.identity);</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.values(obj);</span>
+  _.toArray = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (!obj) <span class="cstat-no" title="statement not covered">return [];</span></span>
+<span class="cstat-no" title="statement not covered">    if (_.isArray(obj)) <span class="cstat-no" title="statement not covered">return slice.call(obj);</span></span>
+<span class="cstat-no" title="statement not covered">    if (isArrayLike(obj)) <span class="cstat-no" title="statement not covered">return _.map(obj, _.identity);</span></span>
+<span class="cstat-no" title="statement not covered">    return _.values(obj);</span>
   };
 &nbsp;
   // Return the number of elements in an object.
-  _.size = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (obj == null) <span class="cstat-no" title="statement not covered" >return 0;</span></span>
-<span class="cstat-no" title="statement not covered" >    return isArrayLike(obj) ? obj.length : _.keys(obj).length;</span>
+  _.size = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (obj == null) <span class="cstat-no" title="statement not covered">return 0;</span></span>
+<span class="cstat-no" title="statement not covered">    return isArrayLike(obj) ? obj.length : _.keys(obj).length;</span>
   };
 &nbsp;
   // Split a collection into two arrays: one whose elements all satisfy the given
   // predicate, and one whose elements all do not satisfy the predicate.
-  _.partition = <span class="fstat-no" title="function not covered" >function(obj, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >    predicate = cb(predicate, context);</span>
-<span class="cstat-no" title="statement not covered" >    var pass = [], fail = [];</span>
-<span class="cstat-no" title="statement not covered" >    _.each(obj, <span class="fstat-no" title="function not covered" >function(value, key, obj) {</span></span>
-<span class="cstat-no" title="statement not covered" >      (predicate(value, key, obj) ? pass : fail).push(value);</span>
+  _.partition = <span class="fstat-no" title="function not covered">function(obj, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">    predicate = cb(predicate, context);</span>
+<span class="cstat-no" title="statement not covered">    var pass = [], fail = [];</span>
+<span class="cstat-no" title="statement not covered">    _.each(obj, <span class="fstat-no" title="function not covered">function(value, key, obj) {</span></span>
+<span class="cstat-no" title="statement not covered">      (predicate(value, key, obj) ? pass : fail).push(value);</span>
     });
-<span class="cstat-no" title="statement not covered" >    return [pass, fail];</span>
+<span class="cstat-no" title="statement not covered">    return [pass, fail];</span>
   };
 &nbsp;
   // Array Functions
@@ -3767,173 +3765,173 @@
   // Get the first element of an array. Passing **n** will return the first N
   // values in the array. Aliased as `head` and `take`. The **guard** check
   // allows it to work with `_.map`.
-  _.first = _.head = _.take = <span class="fstat-no" title="function not covered" >function(array, n, guard) {</span>
-<span class="cstat-no" title="statement not covered" >    if (array == null) <span class="cstat-no" title="statement not covered" >return void 0;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (n == null || guard) <span class="cstat-no" title="statement not covered" >return array[0];</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.initial(array, array.length - n);</span>
+  _.first = _.head = _.take = <span class="fstat-no" title="function not covered">function(array, n, guard) {</span>
+<span class="cstat-no" title="statement not covered">    if (array == null) <span class="cstat-no" title="statement not covered">return void 0;</span></span>
+<span class="cstat-no" title="statement not covered">    if (n == null || guard) <span class="cstat-no" title="statement not covered">return array[0];</span></span>
+<span class="cstat-no" title="statement not covered">    return _.initial(array, array.length - n);</span>
   };
 &nbsp;
   // Returns everything but the last entry of the array. Especially useful on
   // the arguments object. Passing **n** will return all the values in
   // the array, excluding the last N.
-  _.initial = <span class="fstat-no" title="function not covered" >function(array, n, guard) {</span>
-<span class="cstat-no" title="statement not covered" >    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));</span>
+  _.initial = <span class="fstat-no" title="function not covered">function(array, n, guard) {</span>
+<span class="cstat-no" title="statement not covered">    return slice.call(array, 0, Math.max(0, array.length - (n == null || guard ? 1 : n)));</span>
   };
 &nbsp;
   // Get the last element of an array. Passing **n** will return the last N
   // values in the array.
-  _.last = <span class="fstat-no" title="function not covered" >function(array, n, guard) {</span>
-<span class="cstat-no" title="statement not covered" >    if (array == null) <span class="cstat-no" title="statement not covered" >return void 0;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (n == null || guard) <span class="cstat-no" title="statement not covered" >return array[array.length - 1];</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.rest(array, Math.max(0, array.length - n));</span>
+  _.last = <span class="fstat-no" title="function not covered">function(array, n, guard) {</span>
+<span class="cstat-no" title="statement not covered">    if (array == null) <span class="cstat-no" title="statement not covered">return void 0;</span></span>
+<span class="cstat-no" title="statement not covered">    if (n == null || guard) <span class="cstat-no" title="statement not covered">return array[array.length - 1];</span></span>
+<span class="cstat-no" title="statement not covered">    return _.rest(array, Math.max(0, array.length - n));</span>
   };
 &nbsp;
   // Returns everything but the first entry of the array. Aliased as `tail` and `drop`.
   // Especially useful on the arguments object. Passing an **n** will return
   // the rest N values in the array.
-  _.rest = _.tail = _.drop = <span class="fstat-no" title="function not covered" >function(array, n, guard) {</span>
-<span class="cstat-no" title="statement not covered" >    return slice.call(array, n == null || guard ? 1 : n);</span>
+  _.rest = _.tail = _.drop = <span class="fstat-no" title="function not covered">function(array, n, guard) {</span>
+<span class="cstat-no" title="statement not covered">    return slice.call(array, n == null || guard ? 1 : n);</span>
   };
 &nbsp;
   // Trim out all falsy values from an array.
-  _.compact = <span class="fstat-no" title="function not covered" >function(array) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.filter(array, _.identity);</span>
+  _.compact = <span class="fstat-no" title="function not covered">function(array) {</span>
+<span class="cstat-no" title="statement not covered">    return _.filter(array, _.identity);</span>
   };
 &nbsp;
   // Internal implementation of a recursive `flatten` function.
-  var flatten = <span class="fstat-no" title="function not covered" >function(input, shallow, strict, startIndex) {</span>
-<span class="cstat-no" title="statement not covered" >    var output = [], idx = 0;</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = startIndex || 0, length = getLength(input); i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      var value = input[i];</span>
-<span class="cstat-no" title="statement not covered" >      if (isArrayLike(value) &amp;&amp; (_.isArray(value) || _.isArguments(value))) {</span>
+  var flatten = <span class="fstat-no" title="function not covered">function(input, shallow, strict, startIndex) {</span>
+<span class="cstat-no" title="statement not covered">    var output = [], idx = 0;</span>
+<span class="cstat-no" title="statement not covered">    for (var i = startIndex || 0, length = getLength(input); i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      var value = input[i];</span>
+<span class="cstat-no" title="statement not covered">      if (isArrayLike(value) &amp;&amp; (_.isArray(value) || _.isArguments(value))) {</span>
         //flatten current level of array or arguments object
-<span class="cstat-no" title="statement not covered" >        if (!shallow) <span class="cstat-no" title="statement not covered" >value = flatten(value, shallow, strict);</span></span>
-<span class="cstat-no" title="statement not covered" >        var j = 0, len = value.length;</span>
-<span class="cstat-no" title="statement not covered" >        output.length += len;</span>
-<span class="cstat-no" title="statement not covered" >        while (j &lt; len) {</span>
-<span class="cstat-no" title="statement not covered" >          output[idx++] = value[j++];</span>
+<span class="cstat-no" title="statement not covered">        if (!shallow) <span class="cstat-no" title="statement not covered">value = flatten(value, shallow, strict);</span></span>
+<span class="cstat-no" title="statement not covered">        var j = 0, len = value.length;</span>
+<span class="cstat-no" title="statement not covered">        output.length += len;</span>
+<span class="cstat-no" title="statement not covered">        while (j &lt; len) {</span>
+<span class="cstat-no" title="statement not covered">          output[idx++] = value[j++];</span>
         }
-      } else <span class="cstat-no" title="statement not covered" >if (!strict) {</span>
-<span class="cstat-no" title="statement not covered" >        output[idx++] = value;</span>
+      } else <span class="cstat-no" title="statement not covered">if (!strict) {</span>
+<span class="cstat-no" title="statement not covered">        output[idx++] = value;</span>
       }
     }
-<span class="cstat-no" title="statement not covered" >    return output;</span>
+<span class="cstat-no" title="statement not covered">    return output;</span>
   };
 &nbsp;
   // Flatten out an array, either recursively (by default), or just one level.
-  _.flatten = <span class="fstat-no" title="function not covered" >function(array, shallow) {</span>
-<span class="cstat-no" title="statement not covered" >    return flatten(array, shallow, false);</span>
+  _.flatten = <span class="fstat-no" title="function not covered">function(array, shallow) {</span>
+<span class="cstat-no" title="statement not covered">    return flatten(array, shallow, false);</span>
   };
 &nbsp;
   // Return a version of the array that does not contain the specified value(s).
-  _.without = <span class="fstat-no" title="function not covered" >function(array) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.difference(array, slice.call(arguments, 1));</span>
+  _.without = <span class="fstat-no" title="function not covered">function(array) {</span>
+<span class="cstat-no" title="statement not covered">    return _.difference(array, slice.call(arguments, 1));</span>
   };
 &nbsp;
   // Produce a duplicate-free version of the array. If the array has already
   // been sorted, you have the option of using a faster algorithm.
   // Aliased as `unique`.
-  _.uniq = _.unique = <span class="fstat-no" title="function not covered" >function(array, isSorted, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!_.isBoolean(isSorted)) {</span>
-<span class="cstat-no" title="statement not covered" >      context = iteratee;</span>
-<span class="cstat-no" title="statement not covered" >      iteratee = isSorted;</span>
-<span class="cstat-no" title="statement not covered" >      isSorted = false;</span>
+  _.uniq = _.unique = <span class="fstat-no" title="function not covered">function(array, isSorted, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    if (!_.isBoolean(isSorted)) {</span>
+<span class="cstat-no" title="statement not covered">      context = iteratee;</span>
+<span class="cstat-no" title="statement not covered">      iteratee = isSorted;</span>
+<span class="cstat-no" title="statement not covered">      isSorted = false;</span>
     }
-<span class="cstat-no" title="statement not covered" >    if (iteratee != null) <span class="cstat-no" title="statement not covered" >iteratee = cb(iteratee, context);</span></span>
-<span class="cstat-no" title="statement not covered" >    var result = [];</span>
-<span class="cstat-no" title="statement not covered" >    var seen = [];</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0, length = getLength(array); i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      var value = array[i],</span>
+<span class="cstat-no" title="statement not covered">    if (iteratee != null) <span class="cstat-no" title="statement not covered">iteratee = cb(iteratee, context);</span></span>
+<span class="cstat-no" title="statement not covered">    var result = [];</span>
+<span class="cstat-no" title="statement not covered">    var seen = [];</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0, length = getLength(array); i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      var value = array[i],</span>
           computed = iteratee ? iteratee(value, i, array) : value;
-<span class="cstat-no" title="statement not covered" >      if (isSorted) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!i || seen !== computed) <span class="cstat-no" title="statement not covered" >result.push(value);</span></span>
-<span class="cstat-no" title="statement not covered" >        seen = computed;</span>
-      } else <span class="cstat-no" title="statement not covered" >if (iteratee) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!_.contains(seen, computed)) {</span>
-<span class="cstat-no" title="statement not covered" >          seen.push(computed);</span>
-<span class="cstat-no" title="statement not covered" >          result.push(value);</span>
+<span class="cstat-no" title="statement not covered">      if (isSorted) {</span>
+<span class="cstat-no" title="statement not covered">        if (!i || seen !== computed) <span class="cstat-no" title="statement not covered">result.push(value);</span></span>
+<span class="cstat-no" title="statement not covered">        seen = computed;</span>
+      } else <span class="cstat-no" title="statement not covered">if (iteratee) {</span>
+<span class="cstat-no" title="statement not covered">        if (!_.contains(seen, computed)) {</span>
+<span class="cstat-no" title="statement not covered">          seen.push(computed);</span>
+<span class="cstat-no" title="statement not covered">          result.push(value);</span>
         }
-      } else <span class="cstat-no" title="statement not covered" >if (!_.contains(result, value)) {</span>
-<span class="cstat-no" title="statement not covered" >        result.push(value);</span>
+      } else <span class="cstat-no" title="statement not covered">if (!_.contains(result, value)) {</span>
+<span class="cstat-no" title="statement not covered">        result.push(value);</span>
       }
     }
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   // Produce an array that contains the union: each distinct element from all of
   // the passed-in arrays.
-  _.union = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    return _.uniq(flatten(arguments, true, true));</span>
+  _.union = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    return _.uniq(flatten(arguments, true, true));</span>
   };
 &nbsp;
   // Produce an array that contains every item shared between all the
   // passed-in arrays.
-  _.intersection = <span class="fstat-no" title="function not covered" >function(array) {</span>
-<span class="cstat-no" title="statement not covered" >    var result = [];</span>
-<span class="cstat-no" title="statement not covered" >    var argsLength = arguments.length;</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0, length = getLength(array); i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      var item = array[i];</span>
-<span class="cstat-no" title="statement not covered" >      if (_.contains(result, item)) <span class="cstat-no" title="statement not covered" >continue;</span></span>
-<span class="cstat-no" title="statement not covered" >      for (var j = 1; j &lt; argsLength; j++) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!_.contains(arguments[j], item)) <span class="cstat-no" title="statement not covered" >break;</span></span>
+  _.intersection = <span class="fstat-no" title="function not covered">function(array) {</span>
+<span class="cstat-no" title="statement not covered">    var result = [];</span>
+<span class="cstat-no" title="statement not covered">    var argsLength = arguments.length;</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0, length = getLength(array); i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      var item = array[i];</span>
+<span class="cstat-no" title="statement not covered">      if (_.contains(result, item)) <span class="cstat-no" title="statement not covered">continue;</span></span>
+<span class="cstat-no" title="statement not covered">      for (var j = 1; j &lt; argsLength; j++) {</span>
+<span class="cstat-no" title="statement not covered">        if (!_.contains(arguments[j], item)) <span class="cstat-no" title="statement not covered">break;</span></span>
       }
-<span class="cstat-no" title="statement not covered" >      if (j === argsLength) <span class="cstat-no" title="statement not covered" >result.push(item);</span></span>
+<span class="cstat-no" title="statement not covered">      if (j === argsLength) <span class="cstat-no" title="statement not covered">result.push(item);</span></span>
     }
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   // Take the difference between one array and a number of other arrays.
   // Only the elements present in just the first array will remain.
-  _.difference = <span class="fstat-no" title="function not covered" >function(array) {</span>
-<span class="cstat-no" title="statement not covered" >    var rest = flatten(arguments, true, true, 1);</span>
-<span class="cstat-no" title="statement not covered" >    return _.filter(array, <span class="fstat-no" title="function not covered" >function(value){</span></span>
-<span class="cstat-no" title="statement not covered" >      return !_.contains(rest, value);</span>
+  _.difference = <span class="fstat-no" title="function not covered">function(array) {</span>
+<span class="cstat-no" title="statement not covered">    var rest = flatten(arguments, true, true, 1);</span>
+<span class="cstat-no" title="statement not covered">    return _.filter(array, <span class="fstat-no" title="function not covered">function(value){</span></span>
+<span class="cstat-no" title="statement not covered">      return !_.contains(rest, value);</span>
     });
   };
 &nbsp;
   // Zip together multiple lists into a single array -- elements that share
   // an index go together.
-  _.zip = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    return _.unzip(arguments);</span>
+  _.zip = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    return _.unzip(arguments);</span>
   };
 &nbsp;
   // Complement of _.zip. Unzip accepts an array of arrays and groups
   // each array's elements on shared indices
-  _.unzip = <span class="fstat-no" title="function not covered" >function(array) {</span>
-<span class="cstat-no" title="statement not covered" >    var length = array &amp;&amp; _.max(array, getLength).length || 0;</span>
-<span class="cstat-no" title="statement not covered" >    var result = Array(length);</span>
+  _.unzip = <span class="fstat-no" title="function not covered">function(array) {</span>
+<span class="cstat-no" title="statement not covered">    var length = array &amp;&amp; _.max(array, getLength).length || 0;</span>
+<span class="cstat-no" title="statement not covered">    var result = Array(length);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (var index = 0; index &lt; length; index++) {</span>
-<span class="cstat-no" title="statement not covered" >      result[index] = _.pluck(array, index);</span>
+<span class="cstat-no" title="statement not covered">    for (var index = 0; index &lt; length; index++) {</span>
+<span class="cstat-no" title="statement not covered">      result[index] = _.pluck(array, index);</span>
     }
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   // Converts lists into objects. Pass either a single array of `[key, value]`
   // pairs, or two parallel arrays of the same length -- one of keys, and one of
   // the corresponding values.
-  _.object = <span class="fstat-no" title="function not covered" >function(list, values) {</span>
-<span class="cstat-no" title="statement not covered" >    var result = {};</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0, length = getLength(list); i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      if (values) {</span>
-<span class="cstat-no" title="statement not covered" >        result[list[i]] = values[i];</span>
+  _.object = <span class="fstat-no" title="function not covered">function(list, values) {</span>
+<span class="cstat-no" title="statement not covered">    var result = {};</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0, length = getLength(list); i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      if (values) {</span>
+<span class="cstat-no" title="statement not covered">        result[list[i]] = values[i];</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        result[list[i][0]] = list[i][1];</span>
+<span class="cstat-no" title="statement not covered">        result[list[i][0]] = list[i][1];</span>
       }
     }
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   // Generator function to create the findIndex and findLastIndex functions
   function createPredicateIndexFinder(dir) {
-    return <span class="fstat-no" title="function not covered" >function(array, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >      predicate = cb(predicate, context);</span>
-<span class="cstat-no" title="statement not covered" >      var length = getLength(array);</span>
-<span class="cstat-no" title="statement not covered" >      var index = dir &gt; 0 ? 0 : length - 1;</span>
-<span class="cstat-no" title="statement not covered" >      for (; index &gt;= 0 &amp;&amp; index &lt; length; index += dir) {</span>
-<span class="cstat-no" title="statement not covered" >        if (predicate(array[index], index, array)) <span class="cstat-no" title="statement not covered" >return index;</span></span>
+    return <span class="fstat-no" title="function not covered">function(array, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">      predicate = cb(predicate, context);</span>
+<span class="cstat-no" title="statement not covered">      var length = getLength(array);</span>
+<span class="cstat-no" title="statement not covered">      var index = dir &gt; 0 ? 0 : length - 1;</span>
+<span class="cstat-no" title="statement not covered">      for (; index &gt;= 0 &amp;&amp; index &lt; length; index += dir) {</span>
+<span class="cstat-no" title="statement not covered">        if (predicate(array[index], index, array)) <span class="cstat-no" title="statement not covered">return index;</span></span>
       }
-<span class="cstat-no" title="statement not covered" >      return -1;</span>
+<span class="cstat-no" title="statement not covered">      return -1;</span>
     };
   }
 &nbsp;
@@ -3943,39 +3941,39 @@
 &nbsp;
   // Use a comparator function to figure out the smallest index at which
   // an object should be inserted so as to maintain order. Uses binary search.
-  _.sortedIndex = <span class="fstat-no" title="function not covered" >function(array, obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    iteratee = cb(iteratee, context, 1);</span>
-<span class="cstat-no" title="statement not covered" >    var value = iteratee(obj);</span>
-<span class="cstat-no" title="statement not covered" >    var low = 0, high = getLength(array);</span>
-<span class="cstat-no" title="statement not covered" >    while (low &lt; high) {</span>
-<span class="cstat-no" title="statement not covered" >      var mid = Math.floor((low + high) / 2);</span>
-<span class="cstat-no" title="statement not covered" >      if (iteratee(array[mid]) &lt; value) <span class="cstat-no" title="statement not covered" >low = mid + 1; </span>else <span class="cstat-no" title="statement not covered" >high = mid;</span></span>
+  _.sortedIndex = <span class="fstat-no" title="function not covered">function(array, obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    iteratee = cb(iteratee, context, 1);</span>
+<span class="cstat-no" title="statement not covered">    var value = iteratee(obj);</span>
+<span class="cstat-no" title="statement not covered">    var low = 0, high = getLength(array);</span>
+<span class="cstat-no" title="statement not covered">    while (low &lt; high) {</span>
+<span class="cstat-no" title="statement not covered">      var mid = Math.floor((low + high) / 2);</span>
+<span class="cstat-no" title="statement not covered">      if (iteratee(array[mid]) &lt; value) <span class="cstat-no" title="statement not covered">low = mid + 1; </span>else <span class="cstat-no" title="statement not covered">high = mid;</span></span>
     }
-<span class="cstat-no" title="statement not covered" >    return low;</span>
+<span class="cstat-no" title="statement not covered">    return low;</span>
   };
 &nbsp;
   // Generator function to create the indexOf and lastIndexOf functions
   function createIndexFinder(dir, predicateFind, sortedIndex) {
-    return <span class="fstat-no" title="function not covered" >function(array, item, idx) {</span>
-<span class="cstat-no" title="statement not covered" >      var i = 0, length = getLength(array);</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof idx == 'number') {</span>
-<span class="cstat-no" title="statement not covered" >        if (dir &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >            i = idx &gt;= 0 ? idx : Math.max(idx + length, i);</span>
+    return <span class="fstat-no" title="function not covered">function(array, item, idx) {</span>
+<span class="cstat-no" title="statement not covered">      var i = 0, length = getLength(array);</span>
+<span class="cstat-no" title="statement not covered">      if (typeof idx == 'number') {</span>
+<span class="cstat-no" title="statement not covered">        if (dir &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">            i = idx &gt;= 0 ? idx : Math.max(idx + length, i);</span>
         } else {
-<span class="cstat-no" title="statement not covered" >            length = idx &gt;= 0 ? Math.min(idx + 1, length) : idx + length + 1;</span>
+<span class="cstat-no" title="statement not covered">            length = idx &gt;= 0 ? Math.min(idx + 1, length) : idx + length + 1;</span>
         }
-      } else <span class="cstat-no" title="statement not covered" >if (sortedIndex &amp;&amp; idx &amp;&amp; length) {</span>
-<span class="cstat-no" title="statement not covered" >        idx = sortedIndex(array, item);</span>
-<span class="cstat-no" title="statement not covered" >        return array[idx] === item ? idx : -1;</span>
+      } else <span class="cstat-no" title="statement not covered">if (sortedIndex &amp;&amp; idx &amp;&amp; length) {</span>
+<span class="cstat-no" title="statement not covered">        idx = sortedIndex(array, item);</span>
+<span class="cstat-no" title="statement not covered">        return array[idx] === item ? idx : -1;</span>
       }
-<span class="cstat-no" title="statement not covered" >      if (item !== item) {</span>
-<span class="cstat-no" title="statement not covered" >        idx = predicateFind(slice.call(array, i, length), _.isNaN);</span>
-<span class="cstat-no" title="statement not covered" >        return idx &gt;= 0 ? idx + i : -1;</span>
+<span class="cstat-no" title="statement not covered">      if (item !== item) {</span>
+<span class="cstat-no" title="statement not covered">        idx = predicateFind(slice.call(array, i, length), _.isNaN);</span>
+<span class="cstat-no" title="statement not covered">        return idx &gt;= 0 ? idx + i : -1;</span>
       }
-<span class="cstat-no" title="statement not covered" >      for (idx = dir &gt; 0 ? i : length - 1; idx &gt;= 0 &amp;&amp; idx &lt; length; idx += dir) {</span>
-<span class="cstat-no" title="statement not covered" >        if (array[idx] === item) <span class="cstat-no" title="statement not covered" >return idx;</span></span>
+<span class="cstat-no" title="statement not covered">      for (idx = dir &gt; 0 ? i : length - 1; idx &gt;= 0 &amp;&amp; idx &lt; length; idx += dir) {</span>
+<span class="cstat-no" title="statement not covered">        if (array[idx] === item) <span class="cstat-no" title="statement not covered">return idx;</span></span>
       }
-<span class="cstat-no" title="statement not covered" >      return -1;</span>
+<span class="cstat-no" title="statement not covered">      return -1;</span>
     };
   }
 &nbsp;
@@ -3989,21 +3987,21 @@
   // Generate an integer Array containing an arithmetic progression. A port of
   // the native Python `range()` function. See
   // [the Python documentation](http://docs.python.org/library/functions.html#range).
-  _.range = <span class="fstat-no" title="function not covered" >function(start, stop, step) {</span>
-<span class="cstat-no" title="statement not covered" >    if (stop == null) {</span>
-<span class="cstat-no" title="statement not covered" >      stop = start || 0;</span>
-<span class="cstat-no" title="statement not covered" >      start = 0;</span>
+  _.range = <span class="fstat-no" title="function not covered">function(start, stop, step) {</span>
+<span class="cstat-no" title="statement not covered">    if (stop == null) {</span>
+<span class="cstat-no" title="statement not covered">      stop = start || 0;</span>
+<span class="cstat-no" title="statement not covered">      start = 0;</span>
     }
-<span class="cstat-no" title="statement not covered" >    step = step || 1;</span>
+<span class="cstat-no" title="statement not covered">    step = step || 1;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var length = Math.max(Math.ceil((stop - start) / step), 0);</span>
-<span class="cstat-no" title="statement not covered" >    var range = Array(length);</span>
+<span class="cstat-no" title="statement not covered">    var length = Math.max(Math.ceil((stop - start) / step), 0);</span>
+<span class="cstat-no" title="statement not covered">    var range = Array(length);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    for (var idx = 0; idx &lt; length; idx++, start += step) {</span>
-<span class="cstat-no" title="statement not covered" >      range[idx] = start;</span>
+<span class="cstat-no" title="statement not covered">    for (var idx = 0; idx &lt; length; idx++, start += step) {</span>
+<span class="cstat-no" title="statement not covered">      range[idx] = start;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return range;</span>
+<span class="cstat-no" title="statement not covered">    return range;</span>
   };
 &nbsp;
   // Function (ahem) Functions
@@ -4011,25 +4009,25 @@
 &nbsp;
   // Determines whether to execute a function as a constructor
   // or a normal function with the provided arguments
-  var executeBound = <span class="fstat-no" title="function not covered" >function(sourceFunc, boundFunc, context, callingContext, args) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!(callingContext instanceof boundFunc)) <span class="cstat-no" title="statement not covered" >return sourceFunc.apply(context, args);</span></span>
-<span class="cstat-no" title="statement not covered" >    var self = baseCreate(sourceFunc.prototype);</span>
-<span class="cstat-no" title="statement not covered" >    var result = sourceFunc.apply(self, args);</span>
-<span class="cstat-no" title="statement not covered" >    if (_.isObject(result)) <span class="cstat-no" title="statement not covered" >return result;</span></span>
-<span class="cstat-no" title="statement not covered" >    return self;</span>
+  var executeBound = <span class="fstat-no" title="function not covered">function(sourceFunc, boundFunc, context, callingContext, args) {</span>
+<span class="cstat-no" title="statement not covered">    if (!(callingContext instanceof boundFunc)) <span class="cstat-no" title="statement not covered">return sourceFunc.apply(context, args);</span></span>
+<span class="cstat-no" title="statement not covered">    var self = baseCreate(sourceFunc.prototype);</span>
+<span class="cstat-no" title="statement not covered">    var result = sourceFunc.apply(self, args);</span>
+<span class="cstat-no" title="statement not covered">    if (_.isObject(result)) <span class="cstat-no" title="statement not covered">return result;</span></span>
+<span class="cstat-no" title="statement not covered">    return self;</span>
   };
 &nbsp;
   // Create a function bound to a given object (assigning `this`, and arguments,
   // optionally). Delegates to **ECMAScript 5**'s native `Function.bind` if
   // available.
-  _.bind = <span class="fstat-no" title="function not covered" >function(func, context) {</span>
-<span class="cstat-no" title="statement not covered" >    if (nativeBind &amp;&amp; func.bind === nativeBind) <span class="cstat-no" title="statement not covered" >return nativeBind.apply(func, slice.call(arguments, 1));</span></span>
-<span class="cstat-no" title="statement not covered" >    if (!_.isFunction(func)) <span class="cstat-no" title="statement not covered" >throw new TypeError('Bind must be called on a function');</span></span>
-<span class="cstat-no" title="statement not covered" >    var args = slice.call(arguments, 2);</span>
-<span class="cstat-no" title="statement not covered" >    var bound = <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));</span>
+  _.bind = <span class="fstat-no" title="function not covered">function(func, context) {</span>
+<span class="cstat-no" title="statement not covered">    if (nativeBind &amp;&amp; func.bind === nativeBind) <span class="cstat-no" title="statement not covered">return nativeBind.apply(func, slice.call(arguments, 1));</span></span>
+<span class="cstat-no" title="statement not covered">    if (!_.isFunction(func)) <span class="cstat-no" title="statement not covered">throw new TypeError('Bind must be called on a function');</span></span>
+<span class="cstat-no" title="statement not covered">    var args = slice.call(arguments, 2);</span>
+<span class="cstat-no" title="statement not covered">    var bound = <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      return executeBound(func, bound, context, this, args.concat(slice.call(arguments)));</span>
     };
-<span class="cstat-no" title="statement not covered" >    return bound;</span>
+<span class="cstat-no" title="statement not covered">    return bound;</span>
   };
 &nbsp;
   // Partially apply a function by creating a version that has had some of its
@@ -4037,14 +4035,14 @@
   // as a placeholder, allowing any combination of arguments to be pre-filled.
   _.partial = function(func) {
     var boundArgs = slice.call(arguments, 1);
-    var bound = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >      var position = 0, length = boundArgs.length;</span>
-<span class="cstat-no" title="statement not covered" >      var args = Array(length);</span>
-<span class="cstat-no" title="statement not covered" >      for (var i = 0; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];</span>
+    var bound = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">      var position = 0, length = boundArgs.length;</span>
+<span class="cstat-no" title="statement not covered">      var args = Array(length);</span>
+<span class="cstat-no" title="statement not covered">      for (var i = 0; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">        args[i] = boundArgs[i] === _ ? arguments[position++] : boundArgs[i];</span>
       }
-<span class="cstat-no" title="statement not covered" >      while (position &lt; arguments.length) <span class="cstat-no" title="statement not covered" >args.push(arguments[position++]);</span></span>
-<span class="cstat-no" title="statement not covered" >      return executeBound(func, bound, this, this, args);</span>
+<span class="cstat-no" title="statement not covered">      while (position &lt; arguments.length) <span class="cstat-no" title="statement not covered">args.push(arguments[position++]);</span></span>
+<span class="cstat-no" title="statement not covered">      return executeBound(func, bound, this, this, args);</span>
     };
     return bound;
   };
@@ -4052,34 +4050,34 @@
   // Bind a number of an object's methods to that object. Remaining arguments
   // are the method names to be bound. Useful for ensuring that all callbacks
   // defined on an object belong to it.
-  _.bindAll = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    var i, length = arguments.length, key;</span>
-<span class="cstat-no" title="statement not covered" >    if (length &lt;= 1) <span class="cstat-no" title="statement not covered" >throw new Error('bindAll must be passed function names');</span></span>
-<span class="cstat-no" title="statement not covered" >    for (i = 1; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      key = arguments[i];</span>
-<span class="cstat-no" title="statement not covered" >      obj[key] = _.bind(obj[key], obj);</span>
+  _.bindAll = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    var i, length = arguments.length, key;</span>
+<span class="cstat-no" title="statement not covered">    if (length &lt;= 1) <span class="cstat-no" title="statement not covered">throw new Error('bindAll must be passed function names');</span></span>
+<span class="cstat-no" title="statement not covered">    for (i = 1; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      key = arguments[i];</span>
+<span class="cstat-no" title="statement not covered">      obj[key] = _.bind(obj[key], obj);</span>
     }
-<span class="cstat-no" title="statement not covered" >    return obj;</span>
+<span class="cstat-no" title="statement not covered">    return obj;</span>
   };
 &nbsp;
   // Memoize an expensive function by storing its results.
-  _.memoize = <span class="fstat-no" title="function not covered" >function(func, hasher) {</span>
-<span class="cstat-no" title="statement not covered" >    var memoize = <span class="fstat-no" title="function not covered" >function(key) {</span></span>
-<span class="cstat-no" title="statement not covered" >      var cache = memoize.cache;</span>
-<span class="cstat-no" title="statement not covered" >      var address = '' + (hasher ? hasher.apply(this, arguments) : key);</span>
-<span class="cstat-no" title="statement not covered" >      if (!_.has(cache, address)) <span class="cstat-no" title="statement not covered" >cache[address] = func.apply(this, arguments);</span></span>
-<span class="cstat-no" title="statement not covered" >      return cache[address];</span>
+  _.memoize = <span class="fstat-no" title="function not covered">function(func, hasher) {</span>
+<span class="cstat-no" title="statement not covered">    var memoize = <span class="fstat-no" title="function not covered">function(key) {</span></span>
+<span class="cstat-no" title="statement not covered">      var cache = memoize.cache;</span>
+<span class="cstat-no" title="statement not covered">      var address = '' + (hasher ? hasher.apply(this, arguments) : key);</span>
+<span class="cstat-no" title="statement not covered">      if (!_.has(cache, address)) <span class="cstat-no" title="statement not covered">cache[address] = func.apply(this, arguments);</span></span>
+<span class="cstat-no" title="statement not covered">      return cache[address];</span>
     };
-<span class="cstat-no" title="statement not covered" >    memoize.cache = {};</span>
-<span class="cstat-no" title="statement not covered" >    return memoize;</span>
+<span class="cstat-no" title="statement not covered">    memoize.cache = {};</span>
+<span class="cstat-no" title="statement not covered">    return memoize;</span>
   };
 &nbsp;
   // Delays a function for the given number of milliseconds, and then calls
   // it with the arguments supplied.
-  _.delay = <span class="fstat-no" title="function not covered" >function(func, wait) {</span>
-<span class="cstat-no" title="statement not covered" >    var args = slice.call(arguments, 2);</span>
-<span class="cstat-no" title="statement not covered" >    return setTimeout(<span class="fstat-no" title="function not covered" >function(){</span></span>
-<span class="cstat-no" title="statement not covered" >      return func.apply(null, args);</span>
+  _.delay = <span class="fstat-no" title="function not covered">function(func, wait) {</span>
+<span class="cstat-no" title="statement not covered">    var args = slice.call(arguments, 2);</span>
+<span class="cstat-no" title="statement not covered">    return setTimeout(<span class="fstat-no" title="function not covered">function(){</span></span>
+<span class="cstat-no" title="statement not covered">      return func.apply(null, args);</span>
     }, wait);
   };
 &nbsp;
@@ -4092,35 +4090,35 @@
   // as much as it can, without ever going more than once per `wait` duration;
   // but if you'd like to disable the execution on the leading edge, pass
   // `{leading: false}`. To disable execution on the trailing edge, ditto.
-  _.throttle = <span class="fstat-no" title="function not covered" >function(func, wait, options) {</span>
-<span class="cstat-no" title="statement not covered" >    var context, args, result;</span>
-<span class="cstat-no" title="statement not covered" >    var timeout = null;</span>
-<span class="cstat-no" title="statement not covered" >    var previous = 0;</span>
-<span class="cstat-no" title="statement not covered" >    if (!options) <span class="cstat-no" title="statement not covered" >options = {};</span></span>
-<span class="cstat-no" title="statement not covered" >    var later = <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      previous = options.leading === false ? 0 : _.now();</span>
-<span class="cstat-no" title="statement not covered" >      timeout = null;</span>
-<span class="cstat-no" title="statement not covered" >      result = func.apply(context, args);</span>
-<span class="cstat-no" title="statement not covered" >      if (!timeout) <span class="cstat-no" title="statement not covered" >context = args = null;</span></span>
+  _.throttle = <span class="fstat-no" title="function not covered">function(func, wait, options) {</span>
+<span class="cstat-no" title="statement not covered">    var context, args, result;</span>
+<span class="cstat-no" title="statement not covered">    var timeout = null;</span>
+<span class="cstat-no" title="statement not covered">    var previous = 0;</span>
+<span class="cstat-no" title="statement not covered">    if (!options) <span class="cstat-no" title="statement not covered">options = {};</span></span>
+<span class="cstat-no" title="statement not covered">    var later = <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      previous = options.leading === false ? 0 : _.now();</span>
+<span class="cstat-no" title="statement not covered">      timeout = null;</span>
+<span class="cstat-no" title="statement not covered">      result = func.apply(context, args);</span>
+<span class="cstat-no" title="statement not covered">      if (!timeout) <span class="cstat-no" title="statement not covered">context = args = null;</span></span>
     };
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      var now = _.now();</span>
-<span class="cstat-no" title="statement not covered" >      if (!previous &amp;&amp; options.leading === false) <span class="cstat-no" title="statement not covered" >previous = now;</span></span>
-<span class="cstat-no" title="statement not covered" >      var remaining = wait - (now - previous);</span>
-<span class="cstat-no" title="statement not covered" >      context = this;</span>
-<span class="cstat-no" title="statement not covered" >      args = arguments;</span>
-<span class="cstat-no" title="statement not covered" >      if (remaining &lt;= 0 || remaining &gt; wait) {</span>
-<span class="cstat-no" title="statement not covered" >        if (timeout) {</span>
-<span class="cstat-no" title="statement not covered" >          clearTimeout(timeout);</span>
-<span class="cstat-no" title="statement not covered" >          timeout = null;</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      var now = _.now();</span>
+<span class="cstat-no" title="statement not covered">      if (!previous &amp;&amp; options.leading === false) <span class="cstat-no" title="statement not covered">previous = now;</span></span>
+<span class="cstat-no" title="statement not covered">      var remaining = wait - (now - previous);</span>
+<span class="cstat-no" title="statement not covered">      context = this;</span>
+<span class="cstat-no" title="statement not covered">      args = arguments;</span>
+<span class="cstat-no" title="statement not covered">      if (remaining &lt;= 0 || remaining &gt; wait) {</span>
+<span class="cstat-no" title="statement not covered">        if (timeout) {</span>
+<span class="cstat-no" title="statement not covered">          clearTimeout(timeout);</span>
+<span class="cstat-no" title="statement not covered">          timeout = null;</span>
         }
-<span class="cstat-no" title="statement not covered" >        previous = now;</span>
-<span class="cstat-no" title="statement not covered" >        result = func.apply(context, args);</span>
-<span class="cstat-no" title="statement not covered" >        if (!timeout) <span class="cstat-no" title="statement not covered" >context = args = null;</span></span>
-      } else <span class="cstat-no" title="statement not covered" >if (!timeout &amp;&amp; options.trailing !== false) {</span>
-<span class="cstat-no" title="statement not covered" >        timeout = setTimeout(later, remaining);</span>
+<span class="cstat-no" title="statement not covered">        previous = now;</span>
+<span class="cstat-no" title="statement not covered">        result = func.apply(context, args);</span>
+<span class="cstat-no" title="statement not covered">        if (!timeout) <span class="cstat-no" title="statement not covered">context = args = null;</span></span>
+      } else <span class="cstat-no" title="statement not covered">if (!timeout &amp;&amp; options.trailing !== false) {</span>
+<span class="cstat-no" title="statement not covered">        timeout = setTimeout(later, remaining);</span>
       }
-<span class="cstat-no" title="statement not covered" >      return result;</span>
+<span class="cstat-no" title="statement not covered">      return result;</span>
     };
   };
 &nbsp;
@@ -4128,83 +4126,83 @@
   // be triggered. The function will be called after it stops being called for
   // N milliseconds. If `immediate` is passed, trigger the function on the
   // leading edge, instead of the trailing.
-  _.debounce = <span class="fstat-no" title="function not covered" >function(func, wait, immediate) {</span>
-<span class="cstat-no" title="statement not covered" >    var timeout, args, context, timestamp, result;</span>
+  _.debounce = <span class="fstat-no" title="function not covered">function(func, wait, immediate) {</span>
+<span class="cstat-no" title="statement not covered">    var timeout, args, context, timestamp, result;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var later = <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      var last = _.now() - timestamp;</span>
+<span class="cstat-no" title="statement not covered">    var later = <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      var last = _.now() - timestamp;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (last &lt; wait &amp;&amp; last &gt;= 0) {</span>
-<span class="cstat-no" title="statement not covered" >        timeout = setTimeout(later, wait - last);</span>
+<span class="cstat-no" title="statement not covered">      if (last &lt; wait &amp;&amp; last &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered">        timeout = setTimeout(later, wait - last);</span>
       } else {
-<span class="cstat-no" title="statement not covered" >        timeout = null;</span>
-<span class="cstat-no" title="statement not covered" >        if (!immediate) {</span>
-<span class="cstat-no" title="statement not covered" >          result = func.apply(context, args);</span>
-<span class="cstat-no" title="statement not covered" >          if (!timeout) <span class="cstat-no" title="statement not covered" >context = args = null;</span></span>
+<span class="cstat-no" title="statement not covered">        timeout = null;</span>
+<span class="cstat-no" title="statement not covered">        if (!immediate) {</span>
+<span class="cstat-no" title="statement not covered">          result = func.apply(context, args);</span>
+<span class="cstat-no" title="statement not covered">          if (!timeout) <span class="cstat-no" title="statement not covered">context = args = null;</span></span>
         }
       }
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      context = this;</span>
-<span class="cstat-no" title="statement not covered" >      args = arguments;</span>
-<span class="cstat-no" title="statement not covered" >      timestamp = _.now();</span>
-<span class="cstat-no" title="statement not covered" >      var callNow = immediate &amp;&amp; !timeout;</span>
-<span class="cstat-no" title="statement not covered" >      if (!timeout) <span class="cstat-no" title="statement not covered" >timeout = setTimeout(later, wait);</span></span>
-<span class="cstat-no" title="statement not covered" >      if (callNow) {</span>
-<span class="cstat-no" title="statement not covered" >        result = func.apply(context, args);</span>
-<span class="cstat-no" title="statement not covered" >        context = args = null;</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      context = this;</span>
+<span class="cstat-no" title="statement not covered">      args = arguments;</span>
+<span class="cstat-no" title="statement not covered">      timestamp = _.now();</span>
+<span class="cstat-no" title="statement not covered">      var callNow = immediate &amp;&amp; !timeout;</span>
+<span class="cstat-no" title="statement not covered">      if (!timeout) <span class="cstat-no" title="statement not covered">timeout = setTimeout(later, wait);</span></span>
+<span class="cstat-no" title="statement not covered">      if (callNow) {</span>
+<span class="cstat-no" title="statement not covered">        result = func.apply(context, args);</span>
+<span class="cstat-no" title="statement not covered">        context = args = null;</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      return result;</span>
+<span class="cstat-no" title="statement not covered">      return result;</span>
     };
   };
 &nbsp;
   // Returns the first function passed as an argument to the second,
   // allowing you to adjust arguments, run code before and after, and
   // conditionally execute the original function.
-  _.wrap = <span class="fstat-no" title="function not covered" >function(func, wrapper) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.partial(wrapper, func);</span>
+  _.wrap = <span class="fstat-no" title="function not covered">function(func, wrapper) {</span>
+<span class="cstat-no" title="statement not covered">    return _.partial(wrapper, func);</span>
   };
 &nbsp;
   // Returns a negated version of the passed-in predicate.
-  _.negate = <span class="fstat-no" title="function not covered" >function(predicate) {</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      return !predicate.apply(this, arguments);</span>
+  _.negate = <span class="fstat-no" title="function not covered">function(predicate) {</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      return !predicate.apply(this, arguments);</span>
     };
   };
 &nbsp;
   // Returns a function that is the composition of a list of functions, each
   // consuming the return value of the function that follows.
-  _.compose = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var args = arguments;</span>
-<span class="cstat-no" title="statement not covered" >    var start = args.length - 1;</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      var i = start;</span>
-<span class="cstat-no" title="statement not covered" >      var result = args[start].apply(this, arguments);</span>
-<span class="cstat-no" title="statement not covered" >      while (i--) <span class="cstat-no" title="statement not covered" >result = args[i].call(this, result);</span></span>
-<span class="cstat-no" title="statement not covered" >      return result;</span>
+  _.compose = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var args = arguments;</span>
+<span class="cstat-no" title="statement not covered">    var start = args.length - 1;</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      var i = start;</span>
+<span class="cstat-no" title="statement not covered">      var result = args[start].apply(this, arguments);</span>
+<span class="cstat-no" title="statement not covered">      while (i--) <span class="cstat-no" title="statement not covered">result = args[i].call(this, result);</span></span>
+<span class="cstat-no" title="statement not covered">      return result;</span>
     };
   };
 &nbsp;
   // Returns a function that will only be executed on and after the Nth call.
-  _.after = <span class="fstat-no" title="function not covered" >function(times, func) {</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (--times &lt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >        return func.apply(this, arguments);</span>
+  _.after = <span class="fstat-no" title="function not covered">function(times, func) {</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      if (--times &lt; 1) {</span>
+<span class="cstat-no" title="statement not covered">        return func.apply(this, arguments);</span>
       }
     };
   };
 &nbsp;
   // Returns a function that will only be executed up to (but not including) the Nth call.
-  _.before = <span class="fstat-no" title="function not covered" >function(times, func) {</span>
-<span class="cstat-no" title="statement not covered" >    var memo;</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      if (--times &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >        memo = func.apply(this, arguments);</span>
+  _.before = <span class="fstat-no" title="function not covered">function(times, func) {</span>
+<span class="cstat-no" title="statement not covered">    var memo;</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      if (--times &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">        memo = func.apply(this, arguments);</span>
       }
-<span class="cstat-no" title="statement not covered" >      if (times &lt;= 1) <span class="cstat-no" title="statement not covered" >func = null;</span></span>
-<span class="cstat-no" title="statement not covered" >      return memo;</span>
+<span class="cstat-no" title="statement not covered">      if (times &lt;= 1) <span class="cstat-no" title="statement not covered">func = null;</span></span>
+<span class="cstat-no" title="statement not covered">      return memo;</span>
     };
   };
 &nbsp;
@@ -4220,19 +4218,19 @@
   var nonEnumerableProps = ['valueOf', 'isPrototypeOf', 'toString',
                       'propertyIsEnumerable', 'hasOwnProperty', 'toLocaleString'];
 &nbsp;
-<span class="fstat-no" title="function not covered" >  function collectNonEnumProps(obj, keys) {</span>
-<span class="cstat-no" title="statement not covered" >    var nonEnumIdx = nonEnumerableProps.length;</span>
-<span class="cstat-no" title="statement not covered" >    var constructor = obj.constructor;</span>
-<span class="cstat-no" title="statement not covered" >    var proto = (_.isFunction(constructor) &amp;&amp; constructor.prototype) || ObjProto;</span>
+<span class="fstat-no" title="function not covered">  function collectNonEnumProps(obj, keys) {</span>
+<span class="cstat-no" title="statement not covered">    var nonEnumIdx = nonEnumerableProps.length;</span>
+<span class="cstat-no" title="statement not covered">    var constructor = obj.constructor;</span>
+<span class="cstat-no" title="statement not covered">    var proto = (_.isFunction(constructor) &amp;&amp; constructor.prototype) || ObjProto;</span>
 &nbsp;
     // Constructor is a special case.
-<span class="cstat-no" title="statement not covered" >    var prop = 'constructor';</span>
-<span class="cstat-no" title="statement not covered" >    if (_.has(obj, prop) &amp;&amp; !_.contains(keys, prop)) <span class="cstat-no" title="statement not covered" >keys.push(prop);</span></span>
+<span class="cstat-no" title="statement not covered">    var prop = 'constructor';</span>
+<span class="cstat-no" title="statement not covered">    if (_.has(obj, prop) &amp;&amp; !_.contains(keys, prop)) <span class="cstat-no" title="statement not covered">keys.push(prop);</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    while (nonEnumIdx--) {</span>
-<span class="cstat-no" title="statement not covered" >      prop = nonEnumerableProps[nonEnumIdx];</span>
-<span class="cstat-no" title="statement not covered" >      if (prop in obj &amp;&amp; obj[prop] !== proto[prop] &amp;&amp; !_.contains(keys, prop)) {</span>
-<span class="cstat-no" title="statement not covered" >        keys.push(prop);</span>
+<span class="cstat-no" title="statement not covered">    while (nonEnumIdx--) {</span>
+<span class="cstat-no" title="statement not covered">      prop = nonEnumerableProps[nonEnumIdx];</span>
+<span class="cstat-no" title="statement not covered">      if (prop in obj &amp;&amp; obj[prop] !== proto[prop] &amp;&amp; !_.contains(keys, prop)) {</span>
+<span class="cstat-no" title="statement not covered">        keys.push(prop);</span>
       }
     }
   }
@@ -4240,60 +4238,60 @@
   // Retrieve the names of an object's own properties.
   // Delegates to **ECMAScript 5**'s native `Object.keys`
   _.keys = function(obj) {
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!_.isObject(obj)) <span class="cstat-no" title="statement not covered" >return [];</span>
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (nativeKeys) return nativeKeys(obj);
-<span class="cstat-no" title="statement not covered" >    var keys = [];</span>
-<span class="cstat-no" title="statement not covered" >    for (var key in obj) <span class="cstat-no" title="statement not covered" >if (_.has(obj, key)) <span class="cstat-no" title="statement not covered" >keys.push(key);</span></span></span>
+    <span class="missing-if-branch" title="if path not taken">I</span>if (!_.isObject(obj)) <span class="cstat-no" title="statement not covered">return [];</span>
+    <span class="missing-if-branch" title="else path not taken">E</span>if (nativeKeys) return nativeKeys(obj);
+<span class="cstat-no" title="statement not covered">    var keys = [];</span>
+<span class="cstat-no" title="statement not covered">    for (var key in obj) <span class="cstat-no" title="statement not covered">if (_.has(obj, key)) <span class="cstat-no" title="statement not covered">keys.push(key);</span></span></span>
     // Ahem, IE &lt; 9.
-<span class="cstat-no" title="statement not covered" >    if (hasEnumBug) <span class="cstat-no" title="statement not covered" >collectNonEnumProps(obj, keys);</span></span>
-<span class="cstat-no" title="statement not covered" >    return keys;</span>
+<span class="cstat-no" title="statement not covered">    if (hasEnumBug) <span class="cstat-no" title="statement not covered">collectNonEnumProps(obj, keys);</span></span>
+<span class="cstat-no" title="statement not covered">    return keys;</span>
   };
 &nbsp;
   // Retrieve all the property names of an object.
-  _.allKeys = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!_.isObject(obj)) <span class="cstat-no" title="statement not covered" >return [];</span></span>
-<span class="cstat-no" title="statement not covered" >    var keys = [];</span>
-<span class="cstat-no" title="statement not covered" >    for (var key in obj) <span class="cstat-no" title="statement not covered" >keys.push(key);</span></span>
+  _.allKeys = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (!_.isObject(obj)) <span class="cstat-no" title="statement not covered">return [];</span></span>
+<span class="cstat-no" title="statement not covered">    var keys = [];</span>
+<span class="cstat-no" title="statement not covered">    for (var key in obj) <span class="cstat-no" title="statement not covered">keys.push(key);</span></span>
     // Ahem, IE &lt; 9.
-<span class="cstat-no" title="statement not covered" >    if (hasEnumBug) <span class="cstat-no" title="statement not covered" >collectNonEnumProps(obj, keys);</span></span>
-<span class="cstat-no" title="statement not covered" >    return keys;</span>
+<span class="cstat-no" title="statement not covered">    if (hasEnumBug) <span class="cstat-no" title="statement not covered">collectNonEnumProps(obj, keys);</span></span>
+<span class="cstat-no" title="statement not covered">    return keys;</span>
   };
 &nbsp;
   // Retrieve the values of an object's properties.
-  _.values = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    var keys = _.keys(obj);</span>
-<span class="cstat-no" title="statement not covered" >    var length = keys.length;</span>
-<span class="cstat-no" title="statement not covered" >    var values = Array(length);</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      values[i] = obj[keys[i]];</span>
+  _.values = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    var keys = _.keys(obj);</span>
+<span class="cstat-no" title="statement not covered">    var length = keys.length;</span>
+<span class="cstat-no" title="statement not covered">    var values = Array(length);</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      values[i] = obj[keys[i]];</span>
     }
-<span class="cstat-no" title="statement not covered" >    return values;</span>
+<span class="cstat-no" title="statement not covered">    return values;</span>
   };
 &nbsp;
   // Returns the results of applying the iteratee to each element of the object
   // In contrast to _.map it returns an object
-  _.mapObject = <span class="fstat-no" title="function not covered" >function(obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    iteratee = cb(iteratee, context);</span>
-<span class="cstat-no" title="statement not covered" >    var keys =  _.keys(obj),</span>
+  _.mapObject = <span class="fstat-no" title="function not covered">function(obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    iteratee = cb(iteratee, context);</span>
+<span class="cstat-no" title="statement not covered">    var keys =  _.keys(obj),</span>
           length = keys.length,
           results = {},
           currentKey;
-<span class="cstat-no" title="statement not covered" >      for (var index = 0; index &lt; length; index++) {</span>
-<span class="cstat-no" title="statement not covered" >        currentKey = keys[index];</span>
-<span class="cstat-no" title="statement not covered" >        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);</span>
+<span class="cstat-no" title="statement not covered">      for (var index = 0; index &lt; length; index++) {</span>
+<span class="cstat-no" title="statement not covered">        currentKey = keys[index];</span>
+<span class="cstat-no" title="statement not covered">        results[currentKey] = iteratee(obj[currentKey], currentKey, obj);</span>
       }
-<span class="cstat-no" title="statement not covered" >      return results;</span>
+<span class="cstat-no" title="statement not covered">      return results;</span>
   };
 &nbsp;
   // Convert an object into a list of `[key, value]` pairs.
-  _.pairs = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    var keys = _.keys(obj);</span>
-<span class="cstat-no" title="statement not covered" >    var length = keys.length;</span>
-<span class="cstat-no" title="statement not covered" >    var pairs = Array(length);</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      pairs[i] = [keys[i], obj[keys[i]]];</span>
+  _.pairs = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    var keys = _.keys(obj);</span>
+<span class="cstat-no" title="statement not covered">    var length = keys.length;</span>
+<span class="cstat-no" title="statement not covered">    var pairs = Array(length);</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      pairs[i] = [keys[i], obj[keys[i]]];</span>
     }
-<span class="cstat-no" title="statement not covered" >    return pairs;</span>
+<span class="cstat-no" title="statement not covered">    return pairs;</span>
   };
 &nbsp;
   // Invert the keys and values of an object. The values must be serializable.
@@ -4324,46 +4322,46 @@
   _.extendOwn = _.assign = createAssigner(_.keys);
 &nbsp;
   // Returns the first key on an object that passes a predicate test
-  _.findKey = <span class="fstat-no" title="function not covered" >function(obj, predicate, context) {</span>
-<span class="cstat-no" title="statement not covered" >    predicate = cb(predicate, context);</span>
-<span class="cstat-no" title="statement not covered" >    var keys = _.keys(obj), key;</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0, length = keys.length; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      key = keys[i];</span>
-<span class="cstat-no" title="statement not covered" >      if (predicate(obj[key], key, obj)) <span class="cstat-no" title="statement not covered" >return key;</span></span>
+  _.findKey = <span class="fstat-no" title="function not covered">function(obj, predicate, context) {</span>
+<span class="cstat-no" title="statement not covered">    predicate = cb(predicate, context);</span>
+<span class="cstat-no" title="statement not covered">    var keys = _.keys(obj), key;</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0, length = keys.length; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      key = keys[i];</span>
+<span class="cstat-no" title="statement not covered">      if (predicate(obj[key], key, obj)) <span class="cstat-no" title="statement not covered">return key;</span></span>
     }
   };
 &nbsp;
   // Return a copy of the object only containing the whitelisted properties.
-  _.pick = <span class="fstat-no" title="function not covered" >function(object, oiteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    var result = {}, obj = object, iteratee, keys;</span>
-<span class="cstat-no" title="statement not covered" >    if (obj == null) <span class="cstat-no" title="statement not covered" >return result;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (_.isFunction(oiteratee)) {</span>
-<span class="cstat-no" title="statement not covered" >      keys = _.allKeys(obj);</span>
-<span class="cstat-no" title="statement not covered" >      iteratee = optimizeCb(oiteratee, context);</span>
+  _.pick = <span class="fstat-no" title="function not covered">function(object, oiteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    var result = {}, obj = object, iteratee, keys;</span>
+<span class="cstat-no" title="statement not covered">    if (obj == null) <span class="cstat-no" title="statement not covered">return result;</span></span>
+<span class="cstat-no" title="statement not covered">    if (_.isFunction(oiteratee)) {</span>
+<span class="cstat-no" title="statement not covered">      keys = _.allKeys(obj);</span>
+<span class="cstat-no" title="statement not covered">      iteratee = optimizeCb(oiteratee, context);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      keys = flatten(arguments, false, false, 1);</span>
-<span class="cstat-no" title="statement not covered" >      iteratee = <span class="fstat-no" title="function not covered" >function(value, key, obj) {</span> <span class="cstat-no" title="statement not covered" >return key in obj; </span>};</span>
-<span class="cstat-no" title="statement not covered" >      obj = Object(obj);</span>
+<span class="cstat-no" title="statement not covered">      keys = flatten(arguments, false, false, 1);</span>
+<span class="cstat-no" title="statement not covered">      iteratee = <span class="fstat-no" title="function not covered">function(value, key, obj) {</span> <span class="cstat-no" title="statement not covered">return key in obj; </span>};</span>
+<span class="cstat-no" title="statement not covered">      obj = Object(obj);</span>
     }
-<span class="cstat-no" title="statement not covered" >    for (var i = 0, length = keys.length; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      var key = keys[i];</span>
-<span class="cstat-no" title="statement not covered" >      var value = obj[key];</span>
-<span class="cstat-no" title="statement not covered" >      if (iteratee(value, key, obj)) <span class="cstat-no" title="statement not covered" >result[key] = value;</span></span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0, length = keys.length; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      var key = keys[i];</span>
+<span class="cstat-no" title="statement not covered">      var value = obj[key];</span>
+<span class="cstat-no" title="statement not covered">      if (iteratee(value, key, obj)) <span class="cstat-no" title="statement not covered">result[key] = value;</span></span>
     }
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
    // Return a copy of the object without the blacklisted properties.
-  _.omit = <span class="fstat-no" title="function not covered" >function(obj, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    if (_.isFunction(iteratee)) {</span>
-<span class="cstat-no" title="statement not covered" >      iteratee = _.negate(iteratee);</span>
+  _.omit = <span class="fstat-no" title="function not covered">function(obj, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    if (_.isFunction(iteratee)) {</span>
+<span class="cstat-no" title="statement not covered">      iteratee = _.negate(iteratee);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      var keys = _.map(flatten(arguments, false, false, 1), String);</span>
-<span class="cstat-no" title="statement not covered" >      iteratee = <span class="fstat-no" title="function not covered" >function(value, key) {</span></span>
-<span class="cstat-no" title="statement not covered" >        return !_.contains(keys, key);</span>
+<span class="cstat-no" title="statement not covered">      var keys = _.map(flatten(arguments, false, false, 1), String);</span>
+<span class="cstat-no" title="statement not covered">      iteratee = <span class="fstat-no" title="function not covered">function(value, key) {</span></span>
+<span class="cstat-no" title="statement not covered">        return !_.contains(keys, key);</span>
       };
     }
-<span class="cstat-no" title="statement not covered" >    return _.pick(obj, iteratee, context);</span>
+<span class="cstat-no" title="statement not covered">    return _.pick(obj, iteratee, context);</span>
   };
 &nbsp;
   // Fill in a given object with default properties.
@@ -4372,85 +4370,85 @@
   // Creates an object that inherits from the given prototype object.
   // If additional properties are provided then they will be added to the
   // created object.
-  _.create = <span class="fstat-no" title="function not covered" >function(prototype, props) {</span>
-<span class="cstat-no" title="statement not covered" >    var result = baseCreate(prototype);</span>
-<span class="cstat-no" title="statement not covered" >    if (props) <span class="cstat-no" title="statement not covered" >_.extendOwn(result, props);</span></span>
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+  _.create = <span class="fstat-no" title="function not covered">function(prototype, props) {</span>
+<span class="cstat-no" title="statement not covered">    var result = baseCreate(prototype);</span>
+<span class="cstat-no" title="statement not covered">    if (props) <span class="cstat-no" title="statement not covered">_.extendOwn(result, props);</span></span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 &nbsp;
   // Create a (shallow-cloned) duplicate of an object.
-  _.clone = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!_.isObject(obj)) <span class="cstat-no" title="statement not covered" >return obj;</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);</span>
+  _.clone = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (!_.isObject(obj)) <span class="cstat-no" title="statement not covered">return obj;</span></span>
+<span class="cstat-no" title="statement not covered">    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);</span>
   };
 &nbsp;
   // Invokes interceptor with the obj, and then returns obj.
   // The primary purpose of this method is to "tap into" a method chain, in
   // order to perform operations on intermediate results within the chain.
-  _.tap = <span class="fstat-no" title="function not covered" >function(obj, interceptor) {</span>
-<span class="cstat-no" title="statement not covered" >    interceptor(obj);</span>
-<span class="cstat-no" title="statement not covered" >    return obj;</span>
+  _.tap = <span class="fstat-no" title="function not covered">function(obj, interceptor) {</span>
+<span class="cstat-no" title="statement not covered">    interceptor(obj);</span>
+<span class="cstat-no" title="statement not covered">    return obj;</span>
   };
 &nbsp;
   // Returns whether an object has a given set of `key:value` pairs.
-  _.isMatch = <span class="fstat-no" title="function not covered" >function(object, attrs) {</span>
-<span class="cstat-no" title="statement not covered" >    var keys = _.keys(attrs), length = keys.length;</span>
-<span class="cstat-no" title="statement not covered" >    if (object == null) <span class="cstat-no" title="statement not covered" >return !length;</span></span>
-<span class="cstat-no" title="statement not covered" >    var obj = Object(object);</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; length; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      var key = keys[i];</span>
-<span class="cstat-no" title="statement not covered" >      if (attrs[key] !== obj[key] || !(key in obj)) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+  _.isMatch = <span class="fstat-no" title="function not covered">function(object, attrs) {</span>
+<span class="cstat-no" title="statement not covered">    var keys = _.keys(attrs), length = keys.length;</span>
+<span class="cstat-no" title="statement not covered">    if (object == null) <span class="cstat-no" title="statement not covered">return !length;</span></span>
+<span class="cstat-no" title="statement not covered">    var obj = Object(object);</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; length; i++) {</span>
+<span class="cstat-no" title="statement not covered">      var key = keys[i];</span>
+<span class="cstat-no" title="statement not covered">      if (attrs[key] !== obj[key] || !(key in obj)) <span class="cstat-no" title="statement not covered">return false;</span></span>
     }
-<span class="cstat-no" title="statement not covered" >    return true;</span>
+<span class="cstat-no" title="statement not covered">    return true;</span>
   };
 &nbsp;
 &nbsp;
   // Internal recursive comparison function for `isEqual`.
-  var eq = <span class="fstat-no" title="function not covered" >function(a, b, aStack, bStack) {</span>
+  var eq = <span class="fstat-no" title="function not covered">function(a, b, aStack, bStack) {</span>
     // Identical objects are equal. `0 === -0`, but they aren't identical.
     // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
-<span class="cstat-no" title="statement not covered" >    if (a === b) <span class="cstat-no" title="statement not covered" >return a !== 0 || 1 / a === 1 / b;</span></span>
+<span class="cstat-no" title="statement not covered">    if (a === b) <span class="cstat-no" title="statement not covered">return a !== 0 || 1 / a === 1 / b;</span></span>
     // A strict comparison is necessary because `null == undefined`.
-<span class="cstat-no" title="statement not covered" >    if (a == null || b == null) <span class="cstat-no" title="statement not covered" >return a === b;</span></span>
+<span class="cstat-no" title="statement not covered">    if (a == null || b == null) <span class="cstat-no" title="statement not covered">return a === b;</span></span>
     // Unwrap any wrapped objects.
-<span class="cstat-no" title="statement not covered" >    if (a instanceof _) <span class="cstat-no" title="statement not covered" >a = a._wrapped;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (b instanceof _) <span class="cstat-no" title="statement not covered" >b = b._wrapped;</span></span>
+<span class="cstat-no" title="statement not covered">    if (a instanceof _) <span class="cstat-no" title="statement not covered">a = a._wrapped;</span></span>
+<span class="cstat-no" title="statement not covered">    if (b instanceof _) <span class="cstat-no" title="statement not covered">b = b._wrapped;</span></span>
     // Compare `[[Class]]` names.
-<span class="cstat-no" title="statement not covered" >    var className = toString.call(a);</span>
-<span class="cstat-no" title="statement not covered" >    if (className !== toString.call(b)) <span class="cstat-no" title="statement not covered" >return false;</span></span>
-<span class="cstat-no" title="statement not covered" >    switch (className) {</span>
+<span class="cstat-no" title="statement not covered">    var className = toString.call(a);</span>
+<span class="cstat-no" title="statement not covered">    if (className !== toString.call(b)) <span class="cstat-no" title="statement not covered">return false;</span></span>
+<span class="cstat-no" title="statement not covered">    switch (className) {</span>
       // Strings, numbers, regular expressions, dates, and booleans are compared by value.
       case '[object RegExp]':
       // RegExps are coerced to strings for comparison (Note: '' + /a/i === '/a/i')
       case '[object String]':
         // Primitives and their corresponding object wrappers are equivalent; thus, `"5"` is
         // equivalent to `new String("5")`.
-<span class="cstat-no" title="statement not covered" >        return '' + a === '' + b;</span>
+<span class="cstat-no" title="statement not covered">        return '' + a === '' + b;</span>
       case '[object Number]':
         // `NaN`s are equivalent, but non-reflexive.
         // Object(NaN) is equivalent to NaN
-<span class="cstat-no" title="statement not covered" >        if (+a !== +a) <span class="cstat-no" title="statement not covered" >return +b !== +b;</span></span>
+<span class="cstat-no" title="statement not covered">        if (+a !== +a) <span class="cstat-no" title="statement not covered">return +b !== +b;</span></span>
         // An `egal` comparison is performed for other numeric values.
-<span class="cstat-no" title="statement not covered" >        return +a === 0 ? 1 / +a === 1 / b : +a === +b;</span>
+<span class="cstat-no" title="statement not covered">        return +a === 0 ? 1 / +a === 1 / b : +a === +b;</span>
       case '[object Date]':
       case '[object Boolean]':
         // Coerce dates and booleans to numeric primitive values. Dates are compared by their
         // millisecond representations. Note that invalid dates with millisecond representations
         // of `NaN` are not equivalent.
-<span class="cstat-no" title="statement not covered" >        return +a === +b;</span>
+<span class="cstat-no" title="statement not covered">        return +a === +b;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var areArrays = className === '[object Array]';</span>
-<span class="cstat-no" title="statement not covered" >    if (!areArrays) {</span>
-<span class="cstat-no" title="statement not covered" >      if (typeof a != 'object' || typeof b != 'object') <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered">    var areArrays = className === '[object Array]';</span>
+<span class="cstat-no" title="statement not covered">    if (!areArrays) {</span>
+<span class="cstat-no" title="statement not covered">      if (typeof a != 'object' || typeof b != 'object') <span class="cstat-no" title="statement not covered">return false;</span></span>
 &nbsp;
       // Objects with different constructors are not equivalent, but `Object`s or `Array`s
       // from different frames are.
-<span class="cstat-no" title="statement not covered" >      var aCtor = a.constructor, bCtor = b.constructor;</span>
-<span class="cstat-no" title="statement not covered" >      if (aCtor !== bCtor &amp;&amp; !(_.isFunction(aCtor) &amp;&amp; aCtor instanceof aCtor &amp;&amp;</span>
+<span class="cstat-no" title="statement not covered">      var aCtor = a.constructor, bCtor = b.constructor;</span>
+<span class="cstat-no" title="statement not covered">      if (aCtor !== bCtor &amp;&amp; !(_.isFunction(aCtor) &amp;&amp; aCtor instanceof aCtor &amp;&amp;</span>
                                _.isFunction(bCtor) &amp;&amp; bCtor instanceof bCtor)
                           &amp;&amp; ('constructor' in a &amp;&amp; 'constructor' in b)) {
-<span class="cstat-no" title="statement not covered" >        return false;</span>
+<span class="cstat-no" title="statement not covered">        return false;</span>
       }
     }
     // Assume equality for cyclic structures. The algorithm for detecting cyclic
@@ -4458,68 +4456,68 @@
 &nbsp;
     // Initializing stack of traversed objects.
     // It's done here since we only need them for objects and arrays comparison.
-<span class="cstat-no" title="statement not covered" >    aStack = aStack || [];</span>
-<span class="cstat-no" title="statement not covered" >    bStack = bStack || [];</span>
-<span class="cstat-no" title="statement not covered" >    var length = aStack.length;</span>
-<span class="cstat-no" title="statement not covered" >    while (length--) {</span>
+<span class="cstat-no" title="statement not covered">    aStack = aStack || [];</span>
+<span class="cstat-no" title="statement not covered">    bStack = bStack || [];</span>
+<span class="cstat-no" title="statement not covered">    var length = aStack.length;</span>
+<span class="cstat-no" title="statement not covered">    while (length--) {</span>
       // Linear search. Performance is inversely proportional to the number of
       // unique nested structures.
-<span class="cstat-no" title="statement not covered" >      if (aStack[length] === a) <span class="cstat-no" title="statement not covered" >return bStack[length] === b;</span></span>
+<span class="cstat-no" title="statement not covered">      if (aStack[length] === a) <span class="cstat-no" title="statement not covered">return bStack[length] === b;</span></span>
     }
 &nbsp;
     // Add the first object to the stack of traversed objects.
-<span class="cstat-no" title="statement not covered" >    aStack.push(a);</span>
-<span class="cstat-no" title="statement not covered" >    bStack.push(b);</span>
+<span class="cstat-no" title="statement not covered">    aStack.push(a);</span>
+<span class="cstat-no" title="statement not covered">    bStack.push(b);</span>
 &nbsp;
     // Recursively compare objects and arrays.
-<span class="cstat-no" title="statement not covered" >    if (areArrays) {</span>
+<span class="cstat-no" title="statement not covered">    if (areArrays) {</span>
       // Compare array lengths to determine if a deep comparison is necessary.
-<span class="cstat-no" title="statement not covered" >      length = a.length;</span>
-<span class="cstat-no" title="statement not covered" >      if (length !== b.length) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered">      length = a.length;</span>
+<span class="cstat-no" title="statement not covered">      if (length !== b.length) <span class="cstat-no" title="statement not covered">return false;</span></span>
       // Deep compare the contents, ignoring non-numeric properties.
-<span class="cstat-no" title="statement not covered" >      while (length--) {</span>
-<span class="cstat-no" title="statement not covered" >        if (!eq(a[length], b[length], aStack, bStack)) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered">      while (length--) {</span>
+<span class="cstat-no" title="statement not covered">        if (!eq(a[length], b[length], aStack, bStack)) <span class="cstat-no" title="statement not covered">return false;</span></span>
       }
     } else {
       // Deep compare objects.
-<span class="cstat-no" title="statement not covered" >      var keys = _.keys(a), key;</span>
-<span class="cstat-no" title="statement not covered" >      length = keys.length;</span>
+<span class="cstat-no" title="statement not covered">      var keys = _.keys(a), key;</span>
+<span class="cstat-no" title="statement not covered">      length = keys.length;</span>
       // Ensure that both objects contain the same number of properties before comparing deep equality.
-<span class="cstat-no" title="statement not covered" >      if (_.keys(b).length !== length) <span class="cstat-no" title="statement not covered" >return false;</span></span>
-<span class="cstat-no" title="statement not covered" >      while (length--) {</span>
+<span class="cstat-no" title="statement not covered">      if (_.keys(b).length !== length) <span class="cstat-no" title="statement not covered">return false;</span></span>
+<span class="cstat-no" title="statement not covered">      while (length--) {</span>
         // Deep compare each member
-<span class="cstat-no" title="statement not covered" >        key = keys[length];</span>
-<span class="cstat-no" title="statement not covered" >        if (!(_.has(b, key) &amp;&amp; eq(a[key], b[key], aStack, bStack))) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered">        key = keys[length];</span>
+<span class="cstat-no" title="statement not covered">        if (!(_.has(b, key) &amp;&amp; eq(a[key], b[key], aStack, bStack))) <span class="cstat-no" title="statement not covered">return false;</span></span>
       }
     }
     // Remove the first object from the stack of traversed objects.
-<span class="cstat-no" title="statement not covered" >    aStack.pop();</span>
-<span class="cstat-no" title="statement not covered" >    bStack.pop();</span>
-<span class="cstat-no" title="statement not covered" >    return true;</span>
+<span class="cstat-no" title="statement not covered">    aStack.pop();</span>
+<span class="cstat-no" title="statement not covered">    bStack.pop();</span>
+<span class="cstat-no" title="statement not covered">    return true;</span>
   };
 &nbsp;
   // Perform a deep comparison to check if two objects are equal.
-  _.isEqual = <span class="fstat-no" title="function not covered" >function(a, b) {</span>
-<span class="cstat-no" title="statement not covered" >    return eq(a, b);</span>
+  _.isEqual = <span class="fstat-no" title="function not covered">function(a, b) {</span>
+<span class="cstat-no" title="statement not covered">    return eq(a, b);</span>
   };
 &nbsp;
   // Is a given array, string, or object empty?
   // An "empty" object has no enumerable own-properties.
-  _.isEmpty = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    if (obj == null) <span class="cstat-no" title="statement not covered" >return true;</span></span>
-<span class="cstat-no" title="statement not covered" >    if (isArrayLike(obj) &amp;&amp; (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) <span class="cstat-no" title="statement not covered" >return obj.length === 0;</span></span>
-<span class="cstat-no" title="statement not covered" >    return _.keys(obj).length === 0;</span>
+  _.isEmpty = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    if (obj == null) <span class="cstat-no" title="statement not covered">return true;</span></span>
+<span class="cstat-no" title="statement not covered">    if (isArrayLike(obj) &amp;&amp; (_.isArray(obj) || _.isString(obj) || _.isArguments(obj))) <span class="cstat-no" title="statement not covered">return obj.length === 0;</span></span>
+<span class="cstat-no" title="statement not covered">    return _.keys(obj).length === 0;</span>
   };
 &nbsp;
   // Is a given value a DOM element?
-  _.isElement = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return !!(obj &amp;&amp; obj.nodeType === 1);</span>
+  _.isElement = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    return !!(obj &amp;&amp; obj.nodeType === 1);</span>
   };
 &nbsp;
   // Is a given value an array?
   // Delegates to ECMA5's native Array.isArray
-  _.isArray = nativeIsArray || <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >function(obj) {</span></span>
-<span class="cstat-no" title="statement not covered" >    return toString.call(obj) === '[object Array]';</span>
+  _.isArray = nativeIsArray || <span class="fstat-no" title="function not covered"><span class="branch-1 cbranch-no" title="branch not covered">function(obj) {</span></span>
+<span class="cstat-no" title="statement not covered">    return toString.call(obj) === '[object Array]';</span>
   };
 &nbsp;
   // Is a given variable an object?
@@ -4537,49 +4535,49 @@
 &nbsp;
   // Define a fallback version of the method in browsers (ahem, IE &lt; 9), where
   // there isn't any inspectable "Arguments" type.
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (!_.isArguments(arguments)) {
-<span class="cstat-no" title="statement not covered" >    _.isArguments = <span class="fstat-no" title="function not covered" >function(obj) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return _.has(obj, 'callee');</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (!_.isArguments(arguments)) {
+<span class="cstat-no" title="statement not covered">    _.isArguments = <span class="fstat-no" title="function not covered">function(obj) {</span></span>
+<span class="cstat-no" title="statement not covered">      return _.has(obj, 'callee');</span>
     };
   }
 &nbsp;
   // Optimize `isFunction` if appropriate. Work around some typeof bugs in old v8,
   // IE 11 (#1621), and in Safari 8 (#1929).
-  <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof /./ != 'function' &amp;&amp; typeof Int8Array != 'object') {
+  <span class="missing-if-branch" title="else path not taken">E</span>if (typeof /./ != 'function' &amp;&amp; typeof Int8Array != 'object') {
     _.isFunction = function(obj) {
       return typeof obj == 'function' || false;
     };
   }
 &nbsp;
   // Is a given object a finite number?
-  _.isFinite = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return isFinite(obj) &amp;&amp; !isNaN(parseFloat(obj));</span>
+  _.isFinite = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    return isFinite(obj) &amp;&amp; !isNaN(parseFloat(obj));</span>
   };
 &nbsp;
   // Is the given value `NaN`? (NaN is the only number which does not equal itself).
-  _.isNaN = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return _.isNumber(obj) &amp;&amp; obj !== +obj;</span>
+  _.isNaN = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    return _.isNumber(obj) &amp;&amp; obj !== +obj;</span>
   };
 &nbsp;
   // Is a given value a boolean?
-  _.isBoolean = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';</span>
+  _.isBoolean = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    return obj === true || obj === false || toString.call(obj) === '[object Boolean]';</span>
   };
 &nbsp;
   // Is a given value equal to null?
-  _.isNull = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return obj === null;</span>
+  _.isNull = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    return obj === null;</span>
   };
 &nbsp;
   // Is a given variable undefined?
-  _.isUndefined = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return obj === void 0;</span>
+  _.isUndefined = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    return obj === void 0;</span>
   };
 &nbsp;
   // Shortcut function for checking if an object has a given property directly
   // on itself (in other words, not on a prototype).
-  _.has = <span class="fstat-no" title="function not covered" >function(obj, key) {</span>
-<span class="cstat-no" title="statement not covered" >    return obj != null &amp;&amp; hasOwnProperty.call(obj, key);</span>
+  _.has = <span class="fstat-no" title="function not covered">function(obj, key) {</span>
+<span class="cstat-no" title="statement not covered">    return obj != null &amp;&amp; hasOwnProperty.call(obj, key);</span>
   };
 &nbsp;
   // Utility Functions
@@ -4587,63 +4585,63 @@
 &nbsp;
   // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
   // previous owner. Returns a reference to the Underscore object.
-  _.noConflict = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    root._ = previousUnderscore;</span>
-<span class="cstat-no" title="statement not covered" >    return this;</span>
+  _.noConflict = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    root._ = previousUnderscore;</span>
+<span class="cstat-no" title="statement not covered">    return this;</span>
   };
 &nbsp;
   // Keep the identity function around for default iteratees.
-  _.identity = <span class="fstat-no" title="function not covered" >function(value) {</span>
-<span class="cstat-no" title="statement not covered" >    return value;</span>
+  _.identity = <span class="fstat-no" title="function not covered">function(value) {</span>
+<span class="cstat-no" title="statement not covered">    return value;</span>
   };
 &nbsp;
   // Predicate-generating functions. Often useful outside of Underscore.
-  _.constant = <span class="fstat-no" title="function not covered" >function(value) {</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      return value;</span>
+  _.constant = <span class="fstat-no" title="function not covered">function(value) {</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      return value;</span>
     };
   };
 &nbsp;
-  _.noop = <span class="fstat-no" title="function not covered" >function(){</span>};
+  _.noop = <span class="fstat-no" title="function not covered">function(){</span>};
 &nbsp;
   _.property = property;
 &nbsp;
   // Generates a function for a given object that returns a given property.
-  _.propertyOf = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return obj == null ? <span class="fstat-no" title="function not covered" >function(){</span>} : <span class="fstat-no" title="function not covered" >function(key) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return obj[key];</span>
+  _.propertyOf = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    return obj == null ? <span class="fstat-no" title="function not covered">function(){</span>} : <span class="fstat-no" title="function not covered">function(key) {</span></span>
+<span class="cstat-no" title="statement not covered">      return obj[key];</span>
     };
   };
 &nbsp;
   // Returns a predicate for checking whether an object has a given set of
   // `key:value` pairs.
-  _.matcher = _.matches = <span class="fstat-no" title="function not covered" >function(attrs) {</span>
-<span class="cstat-no" title="statement not covered" >    attrs = _.extendOwn({}, attrs);</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >function(obj) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return _.isMatch(obj, attrs);</span>
+  _.matcher = _.matches = <span class="fstat-no" title="function not covered">function(attrs) {</span>
+<span class="cstat-no" title="statement not covered">    attrs = _.extendOwn({}, attrs);</span>
+<span class="cstat-no" title="statement not covered">    return <span class="fstat-no" title="function not covered">function(obj) {</span></span>
+<span class="cstat-no" title="statement not covered">      return _.isMatch(obj, attrs);</span>
     };
   };
 &nbsp;
   // Run a function **n** times.
-  _.times = <span class="fstat-no" title="function not covered" >function(n, iteratee, context) {</span>
-<span class="cstat-no" title="statement not covered" >    var accum = Array(Math.max(0, n));</span>
-<span class="cstat-no" title="statement not covered" >    iteratee = optimizeCb(iteratee, context, 1);</span>
-<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; n; i++) <span class="cstat-no" title="statement not covered" >accum[i] = iteratee(i);</span></span>
-<span class="cstat-no" title="statement not covered" >    return accum;</span>
+  _.times = <span class="fstat-no" title="function not covered">function(n, iteratee, context) {</span>
+<span class="cstat-no" title="statement not covered">    var accum = Array(Math.max(0, n));</span>
+<span class="cstat-no" title="statement not covered">    iteratee = optimizeCb(iteratee, context, 1);</span>
+<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; n; i++) <span class="cstat-no" title="statement not covered">accum[i] = iteratee(i);</span></span>
+<span class="cstat-no" title="statement not covered">    return accum;</span>
   };
 &nbsp;
   // Return a random integer between min and max (inclusive).
-  _.random = <span class="fstat-no" title="function not covered" >function(min, max) {</span>
-<span class="cstat-no" title="statement not covered" >    if (max == null) {</span>
-<span class="cstat-no" title="statement not covered" >      max = min;</span>
-<span class="cstat-no" title="statement not covered" >      min = 0;</span>
+  _.random = <span class="fstat-no" title="function not covered">function(min, max) {</span>
+<span class="cstat-no" title="statement not covered">    if (max == null) {</span>
+<span class="cstat-no" title="statement not covered">      max = min;</span>
+<span class="cstat-no" title="statement not covered">      min = 0;</span>
     }
-<span class="cstat-no" title="statement not covered" >    return min + Math.floor(Math.random() * (max - min + 1));</span>
+<span class="cstat-no" title="statement not covered">    return min + Math.floor(Math.random() * (max - min + 1));</span>
   };
 &nbsp;
   // A (possibly faster) way to get the current timestamp as an integer.
-  _.now = Date.now || <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >    return new Date().getTime();</span>
+  _.now = Date.now || <span class="fstat-no" title="function not covered"><span class="branch-1 cbranch-no" title="branch not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">    return new Date().getTime();</span>
   };
 &nbsp;
    // List of HTML entities for escaping.
@@ -4659,16 +4657,16 @@
 &nbsp;
   // Functions for escaping and unescaping strings to/from HTML interpolation.
   var createEscaper = function(map) {
-    var escaper = <span class="fstat-no" title="function not covered" >function(match) {</span>
-<span class="cstat-no" title="statement not covered" >      return map[match];</span>
+    var escaper = <span class="fstat-no" title="function not covered">function(match) {</span>
+<span class="cstat-no" title="statement not covered">      return map[match];</span>
     };
     // Regexes for identifying a key that needs to be escaped
     var source = '(?:' + _.keys(map).join('|') + ')';
     var testRegexp = RegExp(source);
     var replaceRegexp = RegExp(source, 'g');
-    return <span class="fstat-no" title="function not covered" >function(string) {</span>
-<span class="cstat-no" title="statement not covered" >      string = string == null ? '' : '' + string;</span>
-<span class="cstat-no" title="statement not covered" >      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;</span>
+    return <span class="fstat-no" title="function not covered">function(string) {</span>
+<span class="cstat-no" title="statement not covered">      string = string == null ? '' : '' + string;</span>
+<span class="cstat-no" title="statement not covered">      return testRegexp.test(string) ? string.replace(replaceRegexp, escaper) : string;</span>
     };
   };
   _.escape = createEscaper(escapeMap);
@@ -4676,20 +4674,20 @@
 &nbsp;
   // If the value of the named `property` is a function then invoke it with the
   // `object` as context; otherwise, return it.
-  _.result = <span class="fstat-no" title="function not covered" >function(object, property, fallback) {</span>
-<span class="cstat-no" title="statement not covered" >    var value = object == null ? void 0 : object[property];</span>
-<span class="cstat-no" title="statement not covered" >    if (value === void 0) {</span>
-<span class="cstat-no" title="statement not covered" >      value = fallback;</span>
+  _.result = <span class="fstat-no" title="function not covered">function(object, property, fallback) {</span>
+<span class="cstat-no" title="statement not covered">    var value = object == null ? void 0 : object[property];</span>
+<span class="cstat-no" title="statement not covered">    if (value === void 0) {</span>
+<span class="cstat-no" title="statement not covered">      value = fallback;</span>
     }
-<span class="cstat-no" title="statement not covered" >    return _.isFunction(value) ? value.call(object) : value;</span>
+<span class="cstat-no" title="statement not covered">    return _.isFunction(value) ? value.call(object) : value;</span>
   };
 &nbsp;
   // Generate a unique integer id (unique within the entire client session).
   // Useful for temporary DOM ids.
   var idCounter = 0;
-  _.uniqueId = <span class="fstat-no" title="function not covered" >function(prefix) {</span>
-<span class="cstat-no" title="statement not covered" >    var id = ++idCounter + '';</span>
-<span class="cstat-no" title="statement not covered" >    return prefix ? prefix + id : id;</span>
+  _.uniqueId = <span class="fstat-no" title="function not covered">function(prefix) {</span>
+<span class="cstat-no" title="statement not covered">    var id = ++idCounter + '';</span>
+<span class="cstat-no" title="statement not covered">    return prefix ? prefix + id : id;</span>
   };
 &nbsp;
   // By default, Underscore uses ERB-style template delimiters, change the
@@ -4718,75 +4716,75 @@
 &nbsp;
   var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
 &nbsp;
-  var escapeChar = <span class="fstat-no" title="function not covered" >function(match) {</span>
-<span class="cstat-no" title="statement not covered" >    return '\\' + escapes[match];</span>
+  var escapeChar = <span class="fstat-no" title="function not covered">function(match) {</span>
+<span class="cstat-no" title="statement not covered">    return '\\' + escapes[match];</span>
   };
 &nbsp;
   // JavaScript micro-templating, similar to John Resig's implementation.
   // Underscore templating handles arbitrary delimiters, preserves whitespace,
   // and correctly escapes quotes within interpolated code.
   // NB: `oldSettings` only exists for backwards compatibility.
-  _.template = <span class="fstat-no" title="function not covered" >function(text, settings, oldSettings) {</span>
-<span class="cstat-no" title="statement not covered" >    if (!settings &amp;&amp; oldSettings) <span class="cstat-no" title="statement not covered" >settings = oldSettings;</span></span>
-<span class="cstat-no" title="statement not covered" >    settings = _.defaults({}, settings, _.templateSettings);</span>
+  _.template = <span class="fstat-no" title="function not covered">function(text, settings, oldSettings) {</span>
+<span class="cstat-no" title="statement not covered">    if (!settings &amp;&amp; oldSettings) <span class="cstat-no" title="statement not covered">settings = oldSettings;</span></span>
+<span class="cstat-no" title="statement not covered">    settings = _.defaults({}, settings, _.templateSettings);</span>
 &nbsp;
     // Combine delimiters into one regular expression via alternation.
-<span class="cstat-no" title="statement not covered" >    var matcher = RegExp([</span>
+<span class="cstat-no" title="statement not covered">    var matcher = RegExp([</span>
       (settings.escape || noMatch).source,
       (settings.interpolate || noMatch).source,
       (settings.evaluate || noMatch).source
     ].join('|') + '|$', 'g');
 &nbsp;
     // Compile the template source, escaping string literals appropriately.
-<span class="cstat-no" title="statement not covered" >    var index = 0;</span>
-<span class="cstat-no" title="statement not covered" >    var source = "__p+='";</span>
-<span class="cstat-no" title="statement not covered" >    text.replace(matcher, <span class="fstat-no" title="function not covered" >function(match, escape, interpolate, evaluate, offset) {</span></span>
-<span class="cstat-no" title="statement not covered" >      source += text.slice(index, offset).replace(escaper, escapeChar);</span>
-<span class="cstat-no" title="statement not covered" >      index = offset + match.length;</span>
+<span class="cstat-no" title="statement not covered">    var index = 0;</span>
+<span class="cstat-no" title="statement not covered">    var source = "__p+='";</span>
+<span class="cstat-no" title="statement not covered">    text.replace(matcher, <span class="fstat-no" title="function not covered">function(match, escape, interpolate, evaluate, offset) {</span></span>
+<span class="cstat-no" title="statement not covered">      source += text.slice(index, offset).replace(escaper, escapeChar);</span>
+<span class="cstat-no" title="statement not covered">      index = offset + match.length;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (escape) {</span>
-<span class="cstat-no" title="statement not covered" >        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";</span>
-      } else <span class="cstat-no" title="statement not covered" >if (interpolate) {</span>
-<span class="cstat-no" title="statement not covered" >        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";</span>
-      } else <span class="cstat-no" title="statement not covered" >if (evaluate) {</span>
-<span class="cstat-no" title="statement not covered" >        source += "';\n" + evaluate + "\n__p+='";</span>
+<span class="cstat-no" title="statement not covered">      if (escape) {</span>
+<span class="cstat-no" title="statement not covered">        source += "'+\n((__t=(" + escape + "))==null?'':_.escape(__t))+\n'";</span>
+      } else <span class="cstat-no" title="statement not covered">if (interpolate) {</span>
+<span class="cstat-no" title="statement not covered">        source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";</span>
+      } else <span class="cstat-no" title="statement not covered">if (evaluate) {</span>
+<span class="cstat-no" title="statement not covered">        source += "';\n" + evaluate + "\n__p+='";</span>
       }
 &nbsp;
       // Adobe VMs need the match returned to produce the correct offest.
-<span class="cstat-no" title="statement not covered" >      return match;</span>
+<span class="cstat-no" title="statement not covered">      return match;</span>
     });
-<span class="cstat-no" title="statement not covered" >    source += "';\n";</span>
+<span class="cstat-no" title="statement not covered">    source += "';\n";</span>
 &nbsp;
     // If a variable is not specified, place data values in local scope.
-<span class="cstat-no" title="statement not covered" >    if (!settings.variable) <span class="cstat-no" title="statement not covered" >source = 'with(obj||{}){\n' + source + '}\n';</span></span>
+<span class="cstat-no" title="statement not covered">    if (!settings.variable) <span class="cstat-no" title="statement not covered">source = 'with(obj||{}){\n' + source + '}\n';</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    source = "var __t,__p='',__j=Array.prototype.join," +</span>
+<span class="cstat-no" title="statement not covered">    source = "var __t,__p='',__j=Array.prototype.join," +</span>
       "print=function(){__p+=__j.call(arguments,'');};\n" +
       source + 'return __p;\n';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    try {</span>
-<span class="cstat-no" title="statement not covered" >      var render = new Function(settings.variable || 'obj', '_', source);</span>
+<span class="cstat-no" title="statement not covered">    try {</span>
+<span class="cstat-no" title="statement not covered">      var render = new Function(settings.variable || 'obj', '_', source);</span>
     } catch (e) {
-<span class="cstat-no" title="statement not covered" >      e.source = source;</span>
-<span class="cstat-no" title="statement not covered" >      throw e;</span>
+<span class="cstat-no" title="statement not covered">      e.source = source;</span>
+<span class="cstat-no" title="statement not covered">      throw e;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var template = <span class="fstat-no" title="function not covered" >function(data) {</span></span>
-<span class="cstat-no" title="statement not covered" >      return render.call(this, data, _);</span>
+<span class="cstat-no" title="statement not covered">    var template = <span class="fstat-no" title="function not covered">function(data) {</span></span>
+<span class="cstat-no" title="statement not covered">      return render.call(this, data, _);</span>
     };
 &nbsp;
     // Provide the compiled source as a convenience for precompilation.
-<span class="cstat-no" title="statement not covered" >    var argument = settings.variable || 'obj';</span>
-<span class="cstat-no" title="statement not covered" >    template.source = 'function(' + argument + '){\n' + source + '}';</span>
+<span class="cstat-no" title="statement not covered">    var argument = settings.variable || 'obj';</span>
+<span class="cstat-no" title="statement not covered">    template.source = 'function(' + argument + '){\n' + source + '}';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return template;</span>
+<span class="cstat-no" title="statement not covered">    return template;</span>
   };
 &nbsp;
   // Add a "chain" function. Start chaining a wrapped Underscore object.
-  _.chain = <span class="fstat-no" title="function not covered" >function(obj) {</span>
-<span class="cstat-no" title="statement not covered" >    var instance = _(obj);</span>
-<span class="cstat-no" title="statement not covered" >    instance._chain = true;</span>
-<span class="cstat-no" title="statement not covered" >    return instance;</span>
+  _.chain = <span class="fstat-no" title="function not covered">function(obj) {</span>
+<span class="cstat-no" title="statement not covered">    var instance = _(obj);</span>
+<span class="cstat-no" title="statement not covered">    instance._chain = true;</span>
+<span class="cstat-no" title="statement not covered">    return instance;</span>
   };
 &nbsp;
   // OOP
@@ -4796,18 +4794,18 @@
   // underscore functions. Wrapped objects may be chained.
 &nbsp;
   // Helper function to continue chaining intermediate results.
-  var result = <span class="fstat-no" title="function not covered" >function(instance, obj) {</span>
-<span class="cstat-no" title="statement not covered" >    return instance._chain ? _(obj).chain() : obj;</span>
+  var result = <span class="fstat-no" title="function not covered">function(instance, obj) {</span>
+<span class="cstat-no" title="statement not covered">    return instance._chain ? _(obj).chain() : obj;</span>
   };
 &nbsp;
   // Add your own custom functions to the Underscore object.
   _.mixin = function(obj) {
     _.each(_.functions(obj), function(name) {
       var func = _[name] = obj[name];
-      _.prototype[name] = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >        var args = [this._wrapped];</span>
-<span class="cstat-no" title="statement not covered" >        push.apply(args, arguments);</span>
-<span class="cstat-no" title="statement not covered" >        return result(this, func.apply(_, args));</span>
+      _.prototype[name] = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">        var args = [this._wrapped];</span>
+<span class="cstat-no" title="statement not covered">        push.apply(args, arguments);</span>
+<span class="cstat-no" title="statement not covered">        return result(this, func.apply(_, args));</span>
       };
     });
   };
@@ -4818,33 +4816,33 @@
   // Add all mutator Array functions to the wrapper.
   _.each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
     var method = ArrayProto[name];
-    _.prototype[name] = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >      var obj = this._wrapped;</span>
-<span class="cstat-no" title="statement not covered" >      method.apply(obj, arguments);</span>
-<span class="cstat-no" title="statement not covered" >      if ((name === 'shift' || name === 'splice') &amp;&amp; obj.length === 0) <span class="cstat-no" title="statement not covered" >delete obj[0];</span></span>
-<span class="cstat-no" title="statement not covered" >      return result(this, obj);</span>
+    _.prototype[name] = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">      var obj = this._wrapped;</span>
+<span class="cstat-no" title="statement not covered">      method.apply(obj, arguments);</span>
+<span class="cstat-no" title="statement not covered">      if ((name === 'shift' || name === 'splice') &amp;&amp; obj.length === 0) <span class="cstat-no" title="statement not covered">delete obj[0];</span></span>
+<span class="cstat-no" title="statement not covered">      return result(this, obj);</span>
     };
   });
 &nbsp;
   // Add all accessor Array functions to the wrapper.
   _.each(['concat', 'join', 'slice'], function(name) {
     var method = ArrayProto[name];
-    _.prototype[name] = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >      return result(this, method.apply(this._wrapped, arguments));</span>
+    _.prototype[name] = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">      return result(this, method.apply(this._wrapped, arguments));</span>
     };
   });
 &nbsp;
   // Extracts the result from a wrapped and chained object.
-  _.prototype.value = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    return this._wrapped;</span>
+  _.prototype.value = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    return this._wrapped;</span>
   };
 &nbsp;
   // Provide unwrapping proxy for some methods used in engine operations
   // such as arithmetic and JSON stringification.
   _.prototype.valueOf = _.prototype.toJSON = _.prototype.value;
 &nbsp;
-  _.prototype.toString = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    return '' + this._wrapped;</span>
+  _.prototype.toString = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    return '' + this._wrapped;</span>
   };
 &nbsp;
   // AMD registration happens at the end for compatibility with AMD loaders
@@ -4854,18 +4852,19 @@
   // popular enough to be bundled in a third party lib, but not be part of
   // an AMD load request. Those cases could generate an error when an
   // anonymous define() is called outside of a loader request.
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof define === 'function' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >define.amd)</span> {
-<span class="cstat-no" title="statement not covered" >    define('underscore', [], <span class="fstat-no" title="function not covered" >function() {</span></span>
-<span class="cstat-no" title="statement not covered" >      return _;</span>
+  <span class="missing-if-branch" title="if path not taken">I</span>if (typeof define === 'function' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">define.amd)</span> {
+<span class="cstat-no" title="statement not covered">    define('underscore', [], <span class="fstat-no" title="function not covered">function() {</span></span>
+<span class="cstat-no" title="statement not covered">      return _;</span>
     });
   }
 }.call(this));
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
     <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:28:00 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
