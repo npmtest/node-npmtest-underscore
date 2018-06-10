@@ -33229,7 +33229,7 @@ local.stateInit({
             "npm_package_homepage": "https://github.com/npmtest/node-npmtest-underscore",
             "npm_package_name": "npmtest-underscore",
             "npm_package_nameLib": "npmtest_underscore",
-            "npm_package_version": "2017.4.25"
+            "npm_package_version": "2018.6.10"
         }
     }
 });
