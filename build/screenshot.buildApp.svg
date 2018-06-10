@@ -1,0 +1,101 @@
+<svg height="910" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="910" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26"></tspan>
+
+<tspan x="10" y="42">[MODE_BUILD=buildApp] - 2018-06-10T18:28:12.665Z - npm-testing /home/travis/build/npmtest/node-n\</tspan>
+<tspan x="10" y="58">pmtest-underscore</tspan>
+
+<tspan x="10" y="74"></tspan>
+
+<tspan x="10" y="90"></tspan>
+
+<tspan x="10" y="106">buildApp - merged test-report from file /home/travis/build/npmtest/node-npmtest-underscore/tmp/b\</tspan>
+<tspan x="10" y="122">uild/test-report.json</tspan>
+
+<tspan x="10" y="138">&gt; server listening on http-port 36182</tspan>
+
+<tspan x="10" y="154">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-underscore/node_modules/under\</tspan>
+<tspan x="10" y="170">score/package.json</tspan>
+
+<tspan x="10" y="186">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-underscore/node_modules/under\</tspan>
+<tspan x="10" y="202">score/.gitignore</tspan>
+
+<tspan x="10" y="218">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-underscore/node_modules/under\</tspan>
+<tspan x="10" y="234">score/LICENSE</tspan>
+
+<tspan x="10" y="250">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-underscore/node_modules/under\</tspan>
+<tspan x="10" y="266">score/package.json</tspan>
+
+<tspan x="10" y="282">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-underscore/node_modules/under\</tspan>
+<tspan x="10" y="298">score/README.md</tspan>
+
+<tspan x="10" y="314">apidocCreate - readExample /home/travis/build/npmtest/node-npmtest-underscore/node_modules/under\</tspan>
+<tspan x="10" y="330">score/underscore.js</tspan>
+
+<tspan x="10" y="346">apidocCreate - requiring /home/travis/build/npmtest/node-npmtest-underscore/node_modules/undersc\</tspan>
+<tspan x="10" y="362">ore ...</tspan>
+
+<tspan x="10" y="378">apidocCreate - ... required /home/travis/build/npmtest/node-npmtest-underscore/node_modules/unde\</tspan>
+<tspan x="10" y="394">rscore</tspan>
+
+<tspan x="10" y="410">created customOrg file /home/travis/build/npmtest/node-npmtest-underscore/README.md</tspan>
+
+<tspan x="10" y="426"></tspan>
+
+<tspan x="10" y="442">(node:5728) DeprecationWarning: _linklist module is deprecated. Please use a userland alternativ\</tspan>
+<tspan x="10" y="458">e.</tspan>
+
+<tspan x="10" y="474">(node:5728) DeprecationWarning: sys is deprecated. Use util instead.</tspan>
+
+<tspan x="10" y="490">&gt; server listening on http-port 52840</tspan>
+
+<tspan x="10" y="506">[node test-case 1 of 1 passed] - testCase_buildApp_default</tspan>
+
+<tspan x="10" y="522"></tspan>
+
+<tspan x="10" y="538">buildApp - merged test-report from file /home/travis/build/npmtest/node-npmtest-underscore/tmp/b\</tspan>
+<tspan x="10" y="554">uild/test-report.json</tspan>
+
+<tspan x="10" y="570"></tspan>
+
+<tspan x="10" y="586">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="602">| test-report - buildApidoc - node - linux v6.14.2 - 2018-06-10T18:27:39.826Z</tspan>
+
+<tspan x="10" y="618">|   38893 ms            0 failed        1 passed      |</tspan>
+
+<tspan x="10" y="634">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="650">| test-report - buildApp - node - linux v6.14.2 - 2018-06-10T18:27:10.458Z</tspan>
+
+<tspan x="10" y="666">|   26201 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="682">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="698">| test-report - npmTest - browser - / - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTM\</tspan>
+<tspan x="10" y="714">L, like Gecko) Chrome/58.0.3029.110 Electron/1.7.15 Safari/537.36 - 2018-06-10T18:27:22.028Z</tspan>
+
+<tspan x="10" y="730">|      49 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="746">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="762"></tspan>
+
+<tspan x="10" y="778">created test-report file /home/travis/build/npmtest/node-npmtest-underscore/tmp/build/test-repor\</tspan>
+<tspan x="10" y="794">t.html</tspan>
+
+<tspan x="10" y="810"></tspan>
+
+<tspan x="10" y="826"></tspan>
+
+<tspan x="10" y="842">buildApp - 0 failed tests</tspan>
+
+<tspan x="10" y="858"></tspan>
+
+<tspan x="10" y="874"></tspan>
+
+<tspan x="10" y="890">[MODE_BUILD=buildApp] - 2018-06-10T18:28:20.283Z - EXIT_CODE - 0</tspan>
+
+</text>
+</svg>
